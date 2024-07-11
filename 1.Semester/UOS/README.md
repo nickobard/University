@@ -1,8 +1,5 @@
 # UOS - Unix-like Operating Systems
 
-***
-
-
 ## SYNOPSIS
 Unix-like operating systems represent a large family mostly open-source codes that kept bringing during the history of computers efficient innovative functions of multiuser operating systems for computers and their networks and clusters. The most popular OS today, Android, has a unix kernel. Students get overview of basic properties of this OS family, such as processes and threads, access rights and user identity, filters, or handling files in a file system. They learn to use practically these systems at the level of advanced users who are not only able to utilize powerful system tools that are available to users, but are also able to automatize routine agenda using the unix scripting interface, called shell.
 

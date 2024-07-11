@@ -1,7 +1,5 @@
 # PSI - Computer Networks
 
-***
-
 ## SYNOPSIS
 The course introduces students to the principles of computer networking. It covers basic technologies, protocols, and services commonly used in local networks and in the Internet as well. The lectures will be amended by proseminars that introduce students into network programming and demonstrate the abilities of advanced network technologies. Students practically verify configurations and management of network devices in the lab within the environment of the operating systems Linux and Cisco IOS.
 

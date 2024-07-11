@@ -1,7 +1,5 @@
 # TZP - Technological Fundamentals of Computers
 
-***
-
 ## SYNOPSIS
 Students get acquainted with the fundamentals of digital and analog circuits, as well as basic methods of analyzing them. Students learn how computer structures look like at the lowest level. They are introduced to the function of a transistor. They will understand why processors generate heat, why cooling is necessary, and how to reduce the consumption; what the limits to the maximum operating frequency are and how to raise them; why a computer bus needs to be terminated, what happens if it is not; how a computer power supply looks like (in principle). In the labs, students model the behavior of basic electrical circuits in SW Mathematica.
 
