@@ -5,7 +5,7 @@ Hello, I'm Nikita, this is my repository with all of my [university](https://fit
 Each link leads to course annotation and syllabus, and source code (**bold font with '*'** indicates available source code).
 
 ### 1. Semester
-- [**\* PA1 - Programming and Algorithmics 1**]()
+- [**\* PA1 - Programming and Algorithmics 1**](1.Semester/PA1)
 - [UOS - Unix-like Operating Systems]()
 - [ULI - Introduction to Linux]()
 - [TZP - Technological Fundamentals of Computers]()
