@@ -32,4 +32,4 @@ Each link leads to course annotation and source code.
 - [PRS - Practical Statistics]()
 - [PA2 - Programming and Algorithms 2]() (23/24)
 - [ML2 - Machine Learning 2]()
-- [NPFL138 - Deep Learning ([MFF UK](https://www.mff.cuni.cz/en))]()
+- [NPFL138 - Deep Learning]() ([MFF UK](https://www.mff.cuni.cz/en))
