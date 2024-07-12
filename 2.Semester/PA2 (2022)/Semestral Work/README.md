@@ -87,6 +87,7 @@ Short showcase of documentation:
 ### Source Code Structure:
 
 ```text
+src
 ├── components
 │   ├── AICommands.cpp
 │   ├── AICommands.hpp
