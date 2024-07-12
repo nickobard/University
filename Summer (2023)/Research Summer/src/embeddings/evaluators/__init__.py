@@ -1,0 +1,4 @@
+from evaluators.flair_evaluator import FlairEvaluator
+from evaluators.gensim_evaluator import GensimEvaluator
+from evaluators.base import Evaluator
+from evaluators.transformers_evaluator import TransformersEvaluator

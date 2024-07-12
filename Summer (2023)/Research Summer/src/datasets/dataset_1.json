@@ -1,0 +1,206 @@
+[
+    {
+        "case_id": 1,
+        "text": "The Fauna of Africa, in its broader sense, is all the animals living in Africa and its surrounding seas and islands. The more characteristic African fauna is found in the Afrotropical realm.[1] Lying almost entirely within the tropics, and equally to north and south of the equator creates favourable conditions for rich wildlife. Africa is home to many of the world's most famous fauna in human culture such as lions,rhinos, cheetahs, giraffes, antelope, hippos, leopards, zebras, and African elephants among many others.",
+        "keywords": [
+            {
+                "keyword": "animal",
+                "matches": [
+                    ["animals", 0],
+                    ["lions", 0],
+                    ["rhinos", 0],
+                    ["cheetahs", 0],
+                    ["giraffes", 0],
+                    ["antelope", 0],
+                    ["hippos", 0],
+                    ["leopards", 0],
+                    ["zebras", 0],
+                    ["elephants", 0]
+                ]
+            },
+            {
+                "keyword": "fauna",
+                "matches": [
+                    ["fauna", 0],
+                    ["fauna", 1],
+                    ["wildlife", 0],
+                    ["animals", 0]
+                ]
+            },
+            {
+                "keyword": "computer",
+                "matches": []
+            },
+            {
+                "keyword": "rocket",
+                "matches": []
+            },
+            {
+                "keyword": "pistol",
+                "matches": []
+            }
+        ]
+    },
+    {
+        "case_id": 2,
+        "text": "PM denies knowledge of AWB kickbacks. The Prime Minister has denied he knew AWB was paying kickbacks to Iraq despite writing to the wheat exporter asking to be kept fully informed on Iraq wheat sales. Letters from John Howard and Deputy Prime Minister Mark Vaile to AWB have been released by the Cole inquiry into the oil for food program. In one of the letters Mr Howard asks AWB managing director Andrew Lindberg to remain in close contact with the Government on Iraq wheat sales. The Opposition's Gavan O'Connor says the letter was sent in 2002, the same time AWB was paying kickbacks to Iraq though a Jordanian trucking company. He says the Government can longer wipe its hands of the illicit payments, which totalled $290 million. The responsibility for this must lay may squarely at the feet of Coalition ministers in trade, agriculture and the Prime Minister, he said. But the Prime Minister says letters show he was inquiring about the future of wheat sales in Iraq and do not prove the Government knew of the payments. It would have been astonishing in 2002 if as Prime Minister I hadn't done anything I possibly could to preserve Australia's very valuable wheat market, he said.",
+        "keywords": [
+            {
+                "keyword": "food",
+                "matches": [
+                    ["food", 0],
+                    ["wheat", 1],
+                    ["wheat", 2],
+                    ["wheat", 3],
+                    ["wheat", 4],
+                    ["agriculture", 0]
+                ]
+            },
+            {
+                "keyword": "government",
+                "matches": [
+                    ["minister", 0],
+                    ["deputy", 0],
+                    ["minister", 1],
+                    ["government", 0],
+                    ["government", 1],
+                    ["illicit", 0],
+                    ["coalition", 0],
+                    ["ministers", 0],
+                    ["minister", 2],
+                    ["minister", 3],
+                    ["government", 2],
+                    ["minister", 4]
+                ]
+            },
+            {
+                "keyword": "country",
+                "matches": [
+                    ["iraq", 0],
+                    ["iraq", 1],
+                    ["iraq", 2],
+                    ["iraq", 3],
+                    ["iraq", 4],
+                    ["australia", 0]
+                ]
+            },
+            {
+                "keyword": "sell",
+                "matches": [
+                    ["exporter", 0],
+                    ["sales", 0],
+                    ["sales", 1],
+                    ["trade", 0],
+                    ["sales", 2],
+                    ["market", 0]
+                ]
+            },
+            {
+                "keyword": "pay",
+                "matches": [
+                    ["paying", 0],
+                    ["kickbacks", 0],
+                    ["paying", 1],
+                    ["kickbacks", 1],
+                    ["kickbacks", 2],
+                    ["payments", 0],
+                    ["payments", 1]
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": 3,
+        "text": "Floodwaters close highway\nA major highway between the Northern Territory and Western Australia remains blocked by floodwaters today.\nThe Victoria River has cut the Victoria Highway and also flooded the remote Pigeon Hole Aboriginal community.\nStockman Simon Ham describes the relocation of a hundred people to higher ground.\n\"They had all their vehicles moved out of the community and they had a few camps set up and they were moving more people and belongings out with a couple of boats, just onto higher ground, only 500 metres from the community,\" he said.\n\"They are up on a sandstone ridge at the moment and I think the river heights might be up for a little longer but I think it [the Victoria River] will start going down.\"\n",
+        "keywords": [
+            {
+                "keyword": "road",
+                "matches": [
+                    ["highway", 0],
+                    ["highway", 1],
+                    ["highway", 2]
+                ]
+            },
+            {
+                "keyword": "water",
+                "matches": [
+                    ["floodwaters", 0],
+                    ["floodwaters", 1],
+                    ["river", 0],
+                    ["flooded", 0],
+                    ["river", 1],
+                    ["river", 2]
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": 4,
+        "text": "Snails used in cancer research\nNew research is under way to investigate whether South Australian sea snails could eventually be used to treat cancer.\nUntil now the state's snail population has been virtually unexplored but Flinders University hopes to discover beneficial compounds in predatory sea snails, known as whelks.\nMarine biologist Dr Kirsten Benkendorff says the work follows research overseas, where clinical trials are now investigating anti-cancer properties.\n\"The whelks that I'm looking at at the moment are not currently harvested and not really considered a useful resource so I think that there's a lot of potential economic benefits from that side of things,\" she said.\n",
+        "keywords":[
+            {
+                "keyword": "science",
+                "matches": [
+                    ["research", 0],
+                    ["research", 1],
+                    ["university", 0],
+                    ["discover", 0],
+                    ["biologist", 0],
+                    ["research", 2],
+                    ["investigate", 0],
+                    ["investigating", 0]
+                ]
+            },
+            {
+                "keyword": "snail",
+                "matches": [
+                    ["snails", 0],
+                    ["snail", 0],
+                    ["snails", 1],
+                    ["whelks", 0],
+                    ["whelks", 1]
+                ]
+            },
+            {
+                "keyword": "disease",
+                "matches":[
+                    ["cancer", 0],
+                    ["cancer", 1],
+                    ["anti-cancer", 0]
+                ]
+            },
+            {
+                "keyword": "lava",
+                "matches":[]
+            },
+            {
+                "keyword": "window",
+                "matches": []
+            },
+            {
+                "keyword": "useful",
+                "matches": [
+                    ["beneficial", 0],
+                    ["useful", 0],
+                    ["benefits", 0]
+                ]
+            },
+            {
+                "keyword": "when",
+                "matches":[
+                    ["now", 0],
+                    ["now", 1],
+                    ["moment", 0],
+                    ["currently", 0]
+                ]
+            },
+            {
+                "keyword": "resource",
+                "matches":[
+                    ["harvested", 0],
+                    ["resource", 0]
+                ]
+            }
+        ]
+    }
+]
