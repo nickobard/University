@@ -52,4 +52,4 @@ make doc
 - Push arrows to change direction of the pacman.
 - User portals to slow down the ghost and to teleport.
 - Pick up all the scores to win.
-- Game is over when you loose all the lives.
+- Game is over when you lose all the lives.
