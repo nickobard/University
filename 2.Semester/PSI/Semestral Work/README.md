@@ -1,6 +1,28 @@
 # Annotation
 The goal of this task is to create a multithreaded server for TCP/IP communication and implement a communication protocol according to a given specification. Note, the implementation of the client part is not included in this task! The client part is realized by the testing environment.
 
+# Code Structure:
+
+```text
+Semestral Work
+├── assets
+│   └── tester.png
+├── client
+│   ├── client.cpp
+│   ├── Makefile
+│   └── README.md
+├── README.md
+└── server
+    ├── CClientConn.cpp
+    ├── CClientConn.h
+    ├── CClientConnRobot.cpp
+    ├── CServer.cpp
+    ├── CServer.h
+    ├── Makefile
+    ├── README.md
+    └── server.cpp
+```
+
 # Assignment
 Create a server for automatic control of remote robots. The robots log in to the server themselves, and the server guides them to the center of the coordinate system. For testing purposes, each robot starts at random coordinates and tries to reach the coordinate [0,0]. At the target coordinate, the robot must pick up a secret. Along the way, the robots may encounter obstacles that they must avoid. The server is capable of navigating multiple robots simultaneously and flawlessly implements the communication protocol.
 

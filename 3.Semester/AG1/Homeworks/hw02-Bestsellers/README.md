@@ -1,3 +1,44 @@
+## Code Structure:
+
+```text
+hw02-Bestsellers
+├── CMakeLists.txt
+├── guide
+│   ├── hw02_for_dummies.md
+│   ├── img
+│   │   ├── buno.png
+│   │   ├── bvs_methods.png
+│   │   ├── depth.png
+│   │   ├── global.png
+│   │   ├── index.png
+│   │   ├── local.png
+│   │   ├── local_root.png
+│   │   ├── subtree_size.png
+│   │   ├── subtree_sum.png
+│   │   └── wtf.png
+│   └── tests
+│       ├── BestsellersTester.hpp
+│       ├── MapTester.hpp
+│       └── SetTester.hpp
+├── main.cpp
+├── README.md
+└── src
+    ├── Bestsellers.cpp
+    ├── Bestsellers.hpp
+    ├── BestsellersTester.hpp
+    ├── Map.cpp
+    ├── Map.hpp
+    ├── MapNode.cpp
+    ├── MapNode.hpp
+    ├── MapTester.hpp
+    ├── Node.cpp
+    ├── Node.hpp
+    ├── Set.cpp
+    ├── Set.hpp
+    └── SetTester.hpp
+
+```
+
 [hw02_for_dummies.md](guide/hw02_for_dummies.md) - my guide for classmates to help them solve this task.
 
 ## Bestsellers
