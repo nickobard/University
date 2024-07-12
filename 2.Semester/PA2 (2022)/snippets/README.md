@@ -221,6 +221,7 @@
 │   └── callgrind
 │       ├── callgrind.out.71285
 │       └── main.cpp
+├── README.md
 ├── recursion
 │   ├── factorial.cpp
 │   └── maxinarray.cpp
@@ -303,25 +304,8 @@
 │   ├── initializer.cpp
 │   ├── type_aliases2.cpp
 │   └── type_aliases.cpp
-├── vectors
-│   └── ptrvec.cpp
-├── zt01
-│   ├── o1.cpp
-│   ├── o2.cpp
-│   ├── o3.cpp
-│   └── o4.cpp
-└── zt03
-    ├── t1
-    │   ├── o1.cpp
-    │   ├── o2.cpp
-    │   ├── o3.cpp
-    │   ├── o4.cpp
-    │   ├── o5.cpp
-    │   └── other.cpp
-    ├── t2
-    │   ├── o1.cpp
-    │   ├── o2.cpp
-    │   └── o4.cpp
-    └── t3
-        └── o1.cpp
+└── vectors
+    └── ptrvec.cpp
+
+79 directories, 227 files
 ```
