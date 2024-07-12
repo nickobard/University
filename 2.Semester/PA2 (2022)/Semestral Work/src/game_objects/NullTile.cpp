@@ -7,7 +7,7 @@ void NullTile::Render() const {
 }
 
 TileType NullTile::GetType() const {
-    return TileType::NONE;
+    return TileType::NULL_TILE;
 }
 
 bool NullTile::isObstacle() const {

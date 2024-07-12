@@ -33,6 +33,12 @@ public:
 
     void Update() override;
 
+    void FixedUpdate() override;
+
     void Render() const override;
+
+private:
+
+    void CheckTunnel();
 
 };

@@ -19,6 +19,8 @@ public:
 
     void Update() override;
 
+    void FixedUpdate() override;
+
     /**
      * @brief Shows bonus graphics on the screen each frame.
      * @param position of the tile where this bonus attached.

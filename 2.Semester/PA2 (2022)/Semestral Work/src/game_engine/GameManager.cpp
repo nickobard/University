@@ -19,3 +19,7 @@ void GameManager::ReportPlayerCollision() {
 void GameManager::ReportBonusCollection() {
     GameStateNormal::DecrementBonus();
 }
+
+void GameManager::FixedUpdate() {
+    state_->FixedUpdate();
+}

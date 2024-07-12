@@ -14,7 +14,7 @@ using namespace std;
 struct TileInfo {
 
     /// Type of the tile.
-    TileType type_ = TileType::NONE;
+    TileType type_ = TileType::NULL_TILE;
     /// Option feature of the tile.
     TileOption option_ = TileOption::NONE;
     /// Position of the tile in pixels.
@@ -41,7 +41,7 @@ public:
      * @brief Constructs map parser object and parses tile data to tile info.
      * @param tilesData represents collection of tile data objects used for parsing.
      */
-    explicit MapParser(const vector<vector<TileData>> &tilesData);
+    explicit MapParser(const vector<vector<TileData>> &tilesData, const MapHeader &header);
 
     /**
      * @brief Parses tile data collection to tile info collection.
@@ -49,7 +49,7 @@ public:
      * @return true if successfully parsed.
      * @return false if failed to parse.
      */
-    bool ParseMap(const vector<vector<TileData>> &tilesData);
+    bool ParseMap(const vector<vector<TileData>> &tilesData, const MapHeader &header);
 
     /// Gets parsed tiles info collection.
     inline const vector<vector<TileInfo>> &GetTilesInfo() const;
@@ -62,7 +62,7 @@ private:
      * @param tilePos represents position of the tile in the game map, not in pixels.
      * @return parsed tile info object.
      */
-    static TileInfo ParseTile(TileData tileData, const Vector2<int> &tilePos);
+    TileInfo ParseTile(TileData tileData, const Vector2<int> &tilePos);
 
     /**
      * @brief Parse char tile type to enum value TileType.
@@ -90,10 +90,12 @@ private:
      * @param tilePosition represents position of the tile in the game map.
      * @return pixels representation of the tile position.
      */
-    static Vector2<float> ParseTilePosition(const Vector2<int> &tilePosition);
+    Vector2<float> ParseTilePosition(const Vector2<int> &tilePosition);
 
     /// 2D array of tile info structures with information about each tile.
     vector<vector<TileInfo>> tilesInfo;
+
+    MapHeader header_;
 };
 
 inline const vector<vector<TileInfo>> &MapParser::GetTilesInfo() const {

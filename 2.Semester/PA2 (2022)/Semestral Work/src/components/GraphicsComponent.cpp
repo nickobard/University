@@ -6,3 +6,11 @@ GraphicsComponent::GraphicsComponent(Texture *texture)
 void GraphicsComponent::Render(const Vector2<float> &position) const {
     texture_->RenderTexture(position);
 }
+
+void GraphicsComponent::Render(const Vector2<float> &position, double angle) const {
+    texture_->RenderTexture(position, angle);
+}
+
+void GraphicsComponent::ChangeGraphicsTexture(const string &pathOrMessage) {
+    texture_->LoadTexture(pathOrMessage);
+}

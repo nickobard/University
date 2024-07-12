@@ -7,7 +7,7 @@
 
 /// Enum representing all types of tiles in the game.
 enum class TileType {
-    NONE, EMPTY, WALL, CROSS, TUNNEL, PORTAL
+    NULL_TILE, EMPTY, WALL, CROSS, TUNNEL, PORTAL
 
 };
 
@@ -32,6 +32,8 @@ public:
      */
     Tile(Texture *texture, const Vector2<float> &position);
 
+    Tile(Texture *texture, TransformComponent *transform);
+
     /**
      * @brief Destroys the Tile object. O(1).
      */
@@ -50,6 +52,8 @@ public:
     virtual void Render() const;
 
     void Update() override;
+
+    void FixedUpdate() override;
 
     /**
      * @brief Check if this tile is obstacle or not. O(1).

@@ -12,3 +12,8 @@ void Controller::Update() {
     if (state_ == ENABLED)
         controller_->Update();
 }
+
+void Controller::FixedUpdate() {
+    if (state_ == ENABLED)
+        controller_->FixedUpdate();
+}

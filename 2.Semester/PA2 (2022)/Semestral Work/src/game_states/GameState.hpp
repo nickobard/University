@@ -26,6 +26,8 @@ public:
      */
     virtual void Update() = 0;
 
+    virtual void FixedUpdate() = 0;
+
     /**
      * @brief Provide pointer to game manager.
      */

@@ -15,6 +15,7 @@ void GameGraphics::QuitGameGraphics() {
     // Complete quit of SDL - when the game is closing
     SDL_DestroyRenderer(renderer_);
     SDL_DestroyWindow(window_);
+    TTF_Quit();
     IMG_Quit();
     SDL_Quit();
 }
@@ -71,6 +72,12 @@ bool GameGraphics::InitSDL() {
         cerr << "SDL_image could not initialize! SDL_image Error:" << IMG_GetError() << endl;
         return false;
     }
+
+    if (TTF_Init() != 0) {
+        cerr << "SDL_ttf could not initialize! SDL_ttf Error:" << TTF_GetError() << endl;
+        return false;
+    }
+
     return true;
 }
 
@@ -83,7 +90,7 @@ bool GameGraphics::CreateGameGraphics() {
 
 bool GameGraphics::CreateGameWindow() {
 
-    window_ = SDL_CreateWindow("Pacman Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREED_WIDTH,
+    window_ = SDL_CreateWindow("Pacman Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
                                SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 
     if (window_ == nullptr) {

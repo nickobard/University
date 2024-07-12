@@ -17,6 +17,10 @@ public:
      */
     WallTile(Texture *texture, const Vector2<float> &position);
 
+    WallTile(Texture *texture, TransformComponent *transform);
+
+    void Render() const override;
+
     [[nodiscard]]
     bool isObstacle() const override;
 

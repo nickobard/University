@@ -15,6 +15,7 @@ using namespace std;
 #include "GameGraphics.hpp"
 #include "GameTime.hpp"
 #include "GameEvents.hpp"
+#include "../UI/Canvas.hpp"
 
 
 /**
@@ -88,10 +89,14 @@ private:
      */
     void UpdateGame();
 
+    void FixedUpdateGame();
+
     /**
      * @brief Update game mechanics - each object.
      */
     void UpdateGameObjects();
+
+    void FixedUpdateGameObject();
 
     /**
      * @brief Frees all allocated game objects.
@@ -102,4 +107,5 @@ private:
     GameEvents events_;
     /// Container for all gameActors in the game.
     vector<GameActor *> gameActors_;
+    vector<UIElement *> UIElements_;
 };

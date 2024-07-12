@@ -17,11 +17,15 @@ public:
      */
     virtual ~GraphicsComponent() = default;
 
+    void ChangeGraphicsTexture(const string &pathOrMessage);
+
     /**
      * @brief Render image each game frame onto the screen. O(1).
      * @param position - position where to render on the screen in pixels.
      */
     virtual void Render(const Vector2<float> &position) const;
+
+    virtual void Render(const Vector2<float> &position, double angle) const;
 
     /**
      * @brief Get the size of the texture graphics component is holding. O(1).

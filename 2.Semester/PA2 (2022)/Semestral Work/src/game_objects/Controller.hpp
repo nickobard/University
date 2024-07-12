@@ -29,6 +29,8 @@ public:
 
     void Update() override;
 
+    void FixedUpdate() override;
+
     /// Get controller component.
     inline ControllerComponent *GetController();
 

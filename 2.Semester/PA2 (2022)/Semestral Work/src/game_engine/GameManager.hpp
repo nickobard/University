@@ -24,6 +24,8 @@ public:
      */
     void Update();
 
+    void FixedUpdate();
+
     /**
      * @brief Reports that player was collided with ghost.
      */

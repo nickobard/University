@@ -4,6 +4,10 @@ Tile::Tile(Texture *texture, const Vector2<float> &position)
         : graphics_(new GraphicsComponent(texture))
           , transform_(new TransformComponent(position)) {}
 
+Tile::Tile(Texture *texture, TransformComponent *transform)
+        : graphics_(new GraphicsComponent(texture))
+          , transform_(transform) {}
+
 Tile::~Tile() {
     delete graphics_;
     delete transform_;
@@ -50,3 +54,8 @@ bool Tile::AddBonus(Bonus *bonus) {
 bool Tile::CollectBonus() {
     return false;
 }
+
+void Tile::FixedUpdate() {
+
+}
+

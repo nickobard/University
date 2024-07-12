@@ -14,8 +14,12 @@ void GameStateOver::InitGameState() {
 }
 
 void GameStateOver::Update() {
+
+}
+
+void GameStateOver::FixedUpdate() {
     if (delay_ > 0.0f)
-        delay_ -= GameLocator::GetTime().GetDeltaTime();
+        delay_ -= GameTime::FMS_PER_UPDATE;
     else
         manager_->game_.QuitGame();
 }

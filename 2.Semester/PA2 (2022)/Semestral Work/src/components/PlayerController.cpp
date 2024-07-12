@@ -34,7 +34,6 @@ void PlayerController::Update() {
     else if (currentKeyStates[SDL_SCANCODE_ESCAPE])
         buttonEscape_->Execute(controlled_);
 
-    moveActor_->Execute(controlled_);
 }
 
 void PlayerController::ResetControlled() {
@@ -43,4 +42,8 @@ void PlayerController::ResetControlled() {
     controlled_->SetState(STANDING);
     controlled_->GetTransform()->direction_ = Vector2<float>::Right();
     controlled_->GetTransform()->position_ = spawnTileNode->GetTransform()->position_;
+}
+
+void PlayerController::FixedUpdate() {
+    moveActor_->Execute(controlled_);
 }

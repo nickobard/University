@@ -32,24 +32,54 @@ This task is graded by an automatic system and then by the instructor. First, su
 
 # Results
 
-Created using SDL graphic library.
+Application is created using SDL graphic library.
 
-![](assets/pacman_game.jpg)
+![](docs/pacman_game.jpg)
 
-## How to run:
+Also look at video how it works:
+[pacman_showcase.webm](docs%2Fpacman_showcase.webm)
+
+### Installing Dependencies
+
+For running the game:
+```shell
+sudo apt install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
+```
+For building documentation:
+```shell
+sudo apt install doxygen
+```
+
+### How to run:
 
 ```shell
 # build
 make all
 # run
 make run
-# create documentation
-make doc
 ```
 
-## How to play:
+### How to play:
 
-- Push arrows to change direction of the pacman.
+- Hold arrows to change direction of the pacman.
 - User portals to slow down the ghost and to teleport.
 - Pick up all the scores to win.
 - Game is over when you lose all the lives.
+
+### Documentation:
+
+To generate documentation run:
+
+```shell
+make doc
+```
+
+Then open doc/html/index.html to read generated documentation.
+
+
+Short showcase of documentation:
+
+
+![documentation_main_page.png](docs/documentation_main_page.png)
+![documentation_game_actor.png](docs/documentation_game_actor.png)
+![documentation_game_manager.png](docs/documentation_game_manager.png)

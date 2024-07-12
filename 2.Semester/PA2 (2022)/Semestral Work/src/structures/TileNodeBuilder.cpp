@@ -30,7 +30,7 @@ TileNode *TileNodeBuilder::BuildTileNode(const TileInfo &tileInfo) {
         return BuildTunnelTileNode(tileInfo);
     else if (tileInfo.type_ == TileType::PORTAL)
         return BuildPortalTileNode(tileInfo);
-    else if (tileInfo.type_ == TileType::NONE)
+    else if (tileInfo.type_ == TileType::NULL_TILE)
         return BuildNullTileNode(tileInfo);
     else {
         cerr << "Build tile error: Unrecognized tile type." << endl;
@@ -55,13 +55,17 @@ TileNode *TileNodeBuilder::BuildWallTileNode(const TileInfo &tileInfo) {
 
     TileNode *tileNode;
     auto option = tileInfo.option_;
+    const auto &[pos, dir] = tie(tileInfo.position_, tileInfo.direction_);
 
     if (option == TileOption::OUTER_WALL_CORNER)
-        tileNode = new TileNode(new WallTile(filesystem_.GetTexture(TextureType::WALL), tileInfo.position_));
+        tileNode = new TileNode(
+                new WallTile(filesystem_.GetTexture(TextureType::WALL_CORNER_OUTER), new TransformComponent(pos, dir)));
     else if (option == TileOption::INNER_WALL_CORNER)
-        tileNode = new TileNode(new WallTile(filesystem_.GetTexture(TextureType::WALL), tileInfo.position_));
+        tileNode = new TileNode(
+                new WallTile(filesystem_.GetTexture(TextureType::WALL_CORNER_INNER), new TransformComponent(pos, dir)));
     else
-        tileNode = new TileNode(new WallTile(filesystem_.GetTexture(TextureType::WALL), tileInfo.position_));
+        tileNode = new TileNode(
+                new WallTile(filesystem_.GetTexture(TextureType::WALL_STRAIGHT), new TransformComponent(pos, dir)));
     return tileNode;
 }
 

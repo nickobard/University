@@ -25,7 +25,7 @@ public:
     /**
      * @brief Deletes texture. Use DestroyTexture to safely destroy sdl texture. O(1).
      */
-    ~Texture() noexcept;
+    virtual ~Texture() noexcept;
 
     /**
      * @brief Deleted copy constructor.
@@ -43,7 +43,7 @@ public:
      * @return true if successfully loaded texture.
      * @return false if failed to load texture.
      */
-    bool LoadTexture(const string &path);
+    virtual bool LoadTexture(const string &path);
 
     /**
      * @brief Loads texture from .png image and applies it for renderer. O(1).
@@ -52,13 +52,15 @@ public:
      * @return true if successfully loaded texture.
      * @return false if failed to load texture.
      */
-    bool LoadTexture(const string &path, const TextureSize<float> &size);
+    virtual bool LoadTexture(const string &path, const TextureSize<float> &size);
 
     /**
      * @brief Render this texture on the screen by renderer. O(1).
      * @param position in pixels where to show image on the screen.
      */
-    void RenderTexture(const Vector2<float> &position) const;
+    virtual void RenderTexture(const Vector2<float> &position) const;
+
+    virtual void RenderTexture(const Vector2<float> &position, double angle) const;
 
     /**
      * @brief Queries texture for its native image dimensions
@@ -66,7 +68,7 @@ public:
      * @return true if successfully set up native size.
      * @return false if failed to query image size and set it up.
      */
-    bool SetNativeTextureSize();
+    virtual bool SetNativeTextureSize();
 
     /**
      * @brief Set texture dimensions using user defined size in pixels. O(1).
@@ -81,7 +83,7 @@ public:
     [[nodiscard]]
     inline const TextureSize<float> &GetSize() const;
 
-private:
+protected:
 
     /**
      * @brief Create SDL float rectangle object from center position.
@@ -91,7 +93,7 @@ private:
      * @return SDL_FRect rectangle structure prepared for rendering.
      */
     [[nodiscard]]
-    SDL_FRect CreateRenderRect(const Vector2<float> &position) const;
+    SDL_FRect CreateRenderRectCentered(const Vector2<float> &position) const;
 
     /**
      * @brief Destroys current texture and prepares for loading another texture. O(1).

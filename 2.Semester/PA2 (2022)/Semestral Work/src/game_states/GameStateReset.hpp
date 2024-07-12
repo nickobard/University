@@ -16,6 +16,8 @@ public:
 
     void Update() override;
 
+    void FixedUpdate () override;
+
     void PlayerCollision() override;
 
     void InitGameState() override;

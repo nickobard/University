@@ -4,7 +4,7 @@
 Texture::Texture()
         : texture_(nullptr) {}
 
-Texture::~Texture() {
+Texture::~Texture() noexcept {
     DestroyTexture();
 }
 
@@ -15,22 +15,23 @@ Texture::Texture(Texture &&src) noexcept
 }
 
 bool Texture::LoadTexture(const string &path, const TextureSize<float> &size) {
-    DestroyTexture();
-    texture_ = IMG_LoadTexture(GameLocator::GetRenderer(), path.c_str());
-    if (texture_ == nullptr) {
+    auto texture = IMG_LoadTexture(GameLocator::GetRenderer(), path.c_str());
+    if (texture == nullptr) {
         cerr << "Texture " + path + " could not be loaded!"
                                     " SDL_image Error: " << SDL_GetError() << endl;
         return false;
     }
+
+    DestroyTexture();
+    texture_ = texture;
     SetTextureSize(size);
     return true;
 }
 
 bool Texture::LoadTexture(const string &path) {
 
-    DestroyTexture();
-    texture_ = IMG_LoadTexture(GameLocator::GetRenderer(), path.c_str());
-    if (texture_ == nullptr) {
+    auto texture = IMG_LoadTexture(GameLocator::GetRenderer(), path.c_str());
+    if (texture == nullptr) {
         cerr << "Texture " + path + " could not be loaded!"
                                     " SDL_image Error: " << SDL_GetError() << endl;
         return false;
@@ -38,8 +39,12 @@ bool Texture::LoadTexture(const string &path) {
     if (!SetNativeTextureSize()) {
         cerr << "Texture native dimensions could not be loaded! "
                 " SDL Error: " << SDL_GetError() << endl;
+        SDL_DestroyTexture(texture);
         return false;
     }
+
+    DestroyTexture();
+    texture_ = texture;
     return true;
 }
 
@@ -52,14 +57,14 @@ bool Texture::SetNativeTextureSize() {
     return true;
 }
 
-SDL_FRect Texture::CreateRenderRect(const Vector2<float> &position) const {
+SDL_FRect Texture::CreateRenderRectCentered(const Vector2<float> &position) const {
     return {position.x_ - size_.width_ / 2,
             position.y_ - size_.height_ / 2,
             size_.width_, size_.height_};
 }
 
 void Texture::RenderTexture(const Vector2<float> &position) const {
-    SDL_FRect renderRect = CreateRenderRect(position);
+    SDL_FRect renderRect = CreateRenderRectCentered(position);
     SDL_RenderCopyF(GameLocator::GetRenderer(), texture_, nullptr, &renderRect);
 }
 
@@ -67,9 +72,14 @@ void Texture::DestroyTexture() {
     if (texture_ != nullptr) {
         SDL_DestroyTexture(texture_);
         texture_ = nullptr;
-        size_ = TextureSize<float>::Zero();
     }
 }
+
+void Texture::RenderTexture(const Vector2<float> &position, double angle) const {
+    SDL_FRect renderRect = CreateRenderRectCentered(position);
+    SDL_RenderCopyExF(GameLocator::GetRenderer(), texture_, nullptr, &renderRect, angle, nullptr, SDL_FLIP_NONE);
+}
+
 
 
 

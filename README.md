@@ -7,13 +7,13 @@ Hello, I'm Nikita, this is my repository with all of my [university](https://fit
 
 List of the most interesting, big and relevant projects and courses.
 
-- Machine Learning - Semestral Works during ML1 and ML2 courses.
+- Machine Learning - Semestral Works during [ML1](5.Semester/ML1) and [ML2](6.Semester/ML2) courses.
 - Data Analysis of Eurostat Datasets - semestral works in teams.
 - Data Visualization - explorative analysis, visualization of data, visualization in ML.
 - Wizview - Team SW Project - backend in Python (FastAPI), frontend in Angular.
 - Time Tracker App - full-stack application, backend in Python, frontend in Jinja and Javascript.
 - Dungeon Keeper Database - PostgreSQL database.
-- Pacman Game - C/C++ with using SDL graphics library.
+- [Pacman Game](2.Semester/PA2%20(2022)/Semestral%20Work) - C/C++ with using SDL graphics library.
 
 ## Courses
 

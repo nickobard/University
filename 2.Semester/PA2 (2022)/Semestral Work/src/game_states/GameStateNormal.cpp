@@ -5,18 +5,10 @@
 
 GameStateNormal GameState::normal_;
 int GameStateNormal::bonuses_;
-
-GameStateNormal::GameStateNormal()
-        : playerLives_(MAX_PLAYER_LIVES) {}
+int GameStateNormal::score_;
+int GameStateNormal::playerLives_ = MAX_PLAYER_LIVES;
 
 void GameStateNormal::Update() {
-    if (playerLives_ < 1)
-        manager_->game_.QuitGame();
-    else if (bonuses_ < 1) {
-        DisableControllers();
-        manager_->state_ = &GameState::over_;
-        manager_->state_->InitGameState();
-    }
 
 }
 
@@ -43,4 +35,27 @@ void GameStateNormal::SetBonusAmount(int amount) {
 
 void GameStateNormal::InitGameState() {
 
+}
+
+void GameStateNormal::FixedUpdate() {
+
+    if (playerLives_ < 1)
+        manager_->game_.QuitGame();
+    else if (bonuses_ < 1) {
+        DisableControllers();
+        manager_->state_ = &GameState::over_;
+        manager_->state_->InitGameState();
+    }
+}
+
+int GameStateNormal::GetGameScore() {
+    return score_;
+}
+
+void GameStateNormal::AddScore(int score) {
+    score_ += score;
+}
+
+int GameStateNormal::GetPlayerLives() {
+    return playerLives_;
 }

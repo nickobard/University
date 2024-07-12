@@ -28,10 +28,7 @@ void Ghost::StopMoving() {
 }
 
 void Ghost::Update() {
-    if (physics_->currentNode_->isTunnel())
-        velocity_ = 100.0f;
-    else
-        velocity_ = GameManager::GAME_SPEED;
+
 }
 
 void Ghost::Render() const {
@@ -48,6 +45,17 @@ void Ghost::TurnTo(const Vector2<float> &newDirection) {
 
 void Ghost::Move() {
     auto newPosition =
-            transform_->position_ + transform_->direction_ * (GameLocator::GetTime().GetDeltaTime() * velocity_);
+            transform_->position_ + transform_->direction_ * (GameTime::FMS_PER_UPDATE * velocity_);
     physics_->Move(newPosition);
+}
+
+void Ghost::FixedUpdate() {
+    CheckTunnel();
+}
+
+void Ghost::CheckTunnel() {
+    if (physics_->currentNode_->isTunnel())
+        velocity_ = 100.0f;
+    else
+        velocity_ = GameManager::GAME_SPEED;
 }

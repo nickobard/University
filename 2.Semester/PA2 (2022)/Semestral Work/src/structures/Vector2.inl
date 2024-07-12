@@ -1,4 +1,5 @@
 #pragma once
+
 #include <tuple>
 
 #include "Vector2.hpp"
@@ -213,4 +214,9 @@ T_ Vector2<T_>::Distance(const Vector2<T_> &a, const Vector2<T_> &b) {
 template<typename T_>
 Vector2<T_> Vector2<T_>::ToBack() const {
     return {-x_, -y_};
+}
+
+template<typename T_>
+float Vector2<T_>::ToDegrees() const {
+    return atan2(y_, x_) * 180 / M_PI;
 }

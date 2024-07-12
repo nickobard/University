@@ -2,10 +2,11 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
 #include <iostream>
 
-constexpr int SCREEN_HEIGHT = 340;
-constexpr int SCREED_WIDTH = 1080;
+constexpr size_t SCREEN_HEIGHT = 1080;
+constexpr size_t SCREEN_WIDTH = 1080;
 
 /**
  * @brief Class that initialize overall graphics for the game.
@@ -105,7 +106,6 @@ private:
 
 };
 
-inline
-SDL_Renderer *GameGraphics::GetRenderer() {
+inline SDL_Renderer *GameGraphics::GetRenderer() {
     return renderer_;
 }

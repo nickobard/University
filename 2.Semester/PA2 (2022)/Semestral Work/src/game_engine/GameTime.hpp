@@ -40,6 +40,9 @@ public:
     /// Get the delta ticks in seconds.
     inline float GetDeltaTime() const;
 
+    static constexpr uint MS_PER_UPDATE = 16;
+    static constexpr float FMS_PER_UPDATE = 0.016f;
+
 private:
 
     /// Current ticks at the end of the frame.
@@ -48,6 +51,7 @@ private:
     uint64_t lastTicks_;
     /// Difference between current ticks and previous ticks - frame delta time.
     uint deltaTicks_;
+
 };
 
 

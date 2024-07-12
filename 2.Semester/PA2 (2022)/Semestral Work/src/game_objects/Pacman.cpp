@@ -27,11 +27,10 @@ void Pacman::StopMoving() {
 }
 
 void Pacman::Update() {
-    CollectBonus();
 }
 
 void Pacman::Render() const {
-    graphics_->Render(transform_->position_);
+    graphics_->Render(transform_->position_, transform_->direction_.ToDegrees());
 }
 
 void Pacman::TurnTo(const Vector2<float> &direction) {
@@ -54,11 +53,15 @@ void Pacman::TryChangeDirection(const Vector2<float> &newDirection) {
 void Pacman::Move() {
     if (state_ == MOVING) {
         auto newPosition =
-                transform_->position_ + transform_->direction_ * (GameLocator::GetTime().GetDeltaTime() * velocity_);
+                transform_->position_ + transform_->direction_ * (GameTime::FMS_PER_UPDATE * velocity_);
         physics_->Move(newPosition);
     }
 }
 
 void Pacman::CollectBonus() {
     physics_->currentNode_->CollectBonus();
+}
+
+void Pacman::FixedUpdate() {
+    CollectBonus();
 }

@@ -3,13 +3,15 @@
 #include <unordered_map>
 
 #include "../structures/Texture.hpp"
+#include "../structures/NullTexture.hpp"
 #include "../structures/TextureSize.hpp"
 #include "../game_objects/Tile.hpp"
 
 /// All texture types stored in the filesystem.
 enum class TextureType {
-    PACMAN, GHOST,
-    WALL, EMPTY, CROSS, TUNNEL,
+    PACMAN, BLINKY_GHOST,
+    NULL_TEXTURE, EMPTY, CROSS, TUNNEL,
+    WALL_STRAIGHT, WALL_CORNER_OUTER, WALL_CORNER_INNER,
     BONUS
 };
 
@@ -35,6 +37,8 @@ public:
      */
     GameFilesystem();
 
+    ~GameFilesystem();
+
     /// Gets texture from filesystem of some texture type.
     inline Texture *GetTexture(TextureType type);
 
@@ -52,6 +56,8 @@ private:
      */
     void LoadTexture(TextureType type, const string &path);
 
+    void LoadTexture(TextureType type, Texture *texture);
+
     /** 
      * @brief Loads all textures.
      * @param type represents type of the texture to be loaded.
@@ -61,10 +67,11 @@ private:
     void LoadTexture(TextureType type, const string &path, const TextureSize<float> &size);
 
     /// All loaded textures.
-    unordered_map<TextureType, Texture> textures_;
+    unordered_map<TextureType, Texture *> textures_;
 
 };
 
 inline Texture *GameFilesystem::GetTexture(TextureType type) {
-    return &textures_[type];
+    return textures_[type];
 }
+

@@ -11,6 +11,8 @@
 # Assets files:
 !assets/*
 !assets/maps/*
+!assets/images/*
+!assets/fonts/*
 
 # Git files:
 !.gitignore

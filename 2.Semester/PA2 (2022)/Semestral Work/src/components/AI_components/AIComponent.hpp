@@ -24,6 +24,8 @@ public:
 
     void Update() override;
 
+    void FixedUpdate() override;
+
     void ResetControlled() override;
 
 private:

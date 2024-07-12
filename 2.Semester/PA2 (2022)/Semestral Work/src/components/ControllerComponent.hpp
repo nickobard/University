@@ -27,6 +27,8 @@ public:
      */
     virtual void Update() = 0;
 
+    virtual void FixedUpdate() = 0;
+
     /**
      * @brief Resets controlled game actor to some status.
      */

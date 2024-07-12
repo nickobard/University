@@ -30,7 +30,7 @@ void PhysicsComponent::ResolveOutOfScreenBounds(Vector2<float> &newPosition) {
 
     auto textureSizeOffset = gameActor_.GetGraphics()->GetTextureSize() / 2;
 
-    if (auto rightBound = static_cast<float>(SCREED_WIDTH) - textureSizeOffset.width_; newPosition.x_ > rightBound)
+    if (auto rightBound = static_cast<float>(SCREEN_WIDTH) - textureSizeOffset.width_; newPosition.x_ > rightBound)
         newPosition.x_ = rightBound;
     else if (auto leftBound = 0.0f + textureSizeOffset.width_; newPosition.x_ < leftBound)
         newPosition.x_ = leftBound;

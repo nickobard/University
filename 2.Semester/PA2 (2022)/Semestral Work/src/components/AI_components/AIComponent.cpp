@@ -10,10 +10,6 @@ AIComponent::AIComponent(GameActor *controlled, GameActor *target)
 
 void AIComponent::Update() {
 
-    catchPlayer_->Execute(controlled_, player_);
-    chasePlayer_->Execute(controlled_, player_);
-    moveActor_->Execute(controlled_);
-    catchPlayer_->Execute(controlled_, player_);
 }
 
 AIComponent::~AIComponent() {
@@ -28,4 +24,11 @@ void AIComponent::ResetControlled() {
     controlled_->SetState(MOVING);
     controlled_->GetTransform()->direction_ = Vector2<float>::Right();
     controlled_->GetTransform()->position_ = spawnTileNode->GetTransform()->position_;
+}
+
+void AIComponent::FixedUpdate() {
+    catchPlayer_->Execute(controlled_, player_);
+    chasePlayer_->Execute(controlled_, player_);
+    moveActor_->Execute(controlled_);
+    catchPlayer_->Execute(controlled_, player_);
 }

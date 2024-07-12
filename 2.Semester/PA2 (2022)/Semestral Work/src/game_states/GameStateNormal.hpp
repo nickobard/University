@@ -12,9 +12,11 @@ public:
     /**
      * @brief Constructs normal game state object.
      */
-    GameStateNormal();
+    GameStateNormal() = default;
 
     void Update() override;
+
+    void FixedUpdate() override;
 
     void PlayerCollision() override;
 
@@ -31,6 +33,12 @@ public:
      */
     static void DecrementBonus();
 
+    static void AddScore(int score);
+
+    static int GetGameScore();
+
+    static int GetPlayerLives();
+
 private:
 
     /**
@@ -39,10 +47,12 @@ private:
     void DisableControllers();
 
     /// Current player lives.
-    int playerLives_;
+    static int playerLives_;
 
     /// Represents current bonuses.
     static int bonuses_;
+
+    static int score_;
 
     /// Initial player lives for each game.
     static constexpr int MAX_PLAYER_LIVES = 3;

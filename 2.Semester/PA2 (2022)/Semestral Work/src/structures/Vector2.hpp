@@ -95,6 +95,8 @@ struct Vector2 {
      */
     Vector2 ToBack() const;
 
+    float ToDegrees() const;
+
     /**
      * @brief Converts this object form one type to another.
      * @tparam U_ type to which to convert.

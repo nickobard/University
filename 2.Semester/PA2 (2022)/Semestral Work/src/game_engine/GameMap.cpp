@@ -1,4 +1,6 @@
 #include "GameLocator.hpp"
+#include "GameMap.hpp"
+
 
 GameMap::GameMap(const string &path) {
     LoadMap(path);
@@ -16,7 +18,7 @@ void GameMap::LoadMap(const string &path) {
 
     try {
         MapReader reader(path);
-        MapParser parser(reader.GetTilesData());
+        MapParser parser(reader.GetTilesData(), reader.GetMapHeader());
         builder.LoadTileNodes(parser.GetTilesInfo(), reader.GetMapHeader());
     } catch (...) {
         cerr << "Error: Map " + path + " could not be loaded!" << endl;
@@ -59,4 +61,3 @@ void GameMap::LoadRenderMap() {
             renderTilesArray_.push_back(tile);
         }
 }
-

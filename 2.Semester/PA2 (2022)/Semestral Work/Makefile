@@ -9,7 +9,7 @@ CXXLIBS = -std=c++17
 CXXFLAGS = $(CXXLIBS) -Wall -pedantic -ggdb
 # Linking tool and flags
 LD = c++
-LDLIBS  = -lSDL2 -lSDL2_image
+LDLIBS  = -lSDL2 -lSDL2_image -lSDL2_ttf
 LDFLAGS = 
 
 

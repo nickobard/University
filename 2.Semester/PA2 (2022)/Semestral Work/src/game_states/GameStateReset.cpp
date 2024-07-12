@@ -8,12 +8,7 @@ GameStateReset::GameStateReset()
         : delay_(0.0f) {}
 
 void GameStateReset::Update() {
-    if (delay_ > 0.0f)
-        delay_ -= GameLocator::GetTime().GetDeltaTime();
-    else {
-        ResetControllers();
-        manager_->state_ = &GameState::normal_;
-    }
+
 }
 
 void GameStateReset::PlayerCollision() {
@@ -29,5 +24,14 @@ void GameStateReset::ResetControllers() {
 
 void GameStateReset::InitGameState() {
     delay_ = RESET_DELAY;
+}
+
+void GameStateReset::FixedUpdate() {
+    if (delay_ > 0.0f)
+        delay_ -= GameTime::FMS_PER_UPDATE;
+    else {
+        ResetControllers();
+        manager_->state_ = &GameState::normal_;
+    }
 }
 

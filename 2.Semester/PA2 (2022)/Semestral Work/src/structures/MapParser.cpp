@@ -1,14 +1,17 @@
 #include "MapParser.hpp"
 #include "../game_engine/GameLocator.hpp"
 
-MapParser::MapParser(const vector<vector<TileData>> &tilesData) {
-    if (!ParseMap(tilesData)) {
+MapParser::MapParser(const vector<vector<TileData>> &tilesData, const MapHeader &header) {
+    if (!ParseMap(tilesData, header)) {
         cerr << "Parse error: Could not parse map!" << endl;
         throw exception();
     }
 }
 
-bool MapParser::ParseMap(const vector<vector<TileData>> &tilesData) {
+bool MapParser::ParseMap(const vector<vector<TileData>> &tilesData, const MapHeader &header) {
+
+    header_ = header;
+
     for (size_t row = 0, rows = tilesData.size(); row < rows; row++) {
         tilesInfo.emplace_back();
         for (size_t col = 0, cols = tilesData[row].size(); col < cols; col++) {
@@ -49,7 +52,7 @@ TileType MapParser::ParseTileType(char tileType) {
         case '@':
             return TileType::PORTAL;
         case '0':
-            return TileType::NONE;
+            return TileType::NULL_TILE;
         default:
             cerr << "Parse error: Wrong tile type: '" << tileType << "'" << endl;
             throw exception();
@@ -92,5 +95,10 @@ Vector2<float> MapParser::ParseTileDirection(char tileDirection) {
 }
 
 Vector2<float> MapParser::ParseTilePosition(const Vector2<int> &tilePosition) {
-    return GameMap::GetPixelsPosition(tilePosition);
+    auto position = GameMap::GetPixelsPosition(tilePosition);
+
+    auto offsetLeft = (SCREEN_WIDTH - header_.mapSize_.second * TILE_SIZE) / 2;
+    auto offsetUp = (SCREEN_HEIGHT - header_.mapSize_.first * TILE_SIZE) / 2;
+
+    return position + Vector2<int>(offsetLeft, offsetUp);
 }
