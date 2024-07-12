@@ -102,6 +102,8 @@ Current database scheme:
 
 ![devdb.png](docs/images/devdb.png)
 
+[data.json](docs%2Fdb%2Fdata.json) and [model.json](docs%2Fdb%2Fmodel.json) are data used for FIT CTU intranet DBS portal data modeller.
+
 ## Report:
 
 Report can be found on [/about](http://localhost:8000/about) page or in the **bardanik.pdf** file in the root directory.
