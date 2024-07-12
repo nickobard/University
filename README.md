@@ -11,7 +11,7 @@ List of the most interesting, big and relevant projects and courses.
 - Data Analysis of Eurostat Datasets - semestral works in teams.
 - Data Visualization - explorative analysis, visualization of data, visualization in ML.
 - Wizview - Team SW Project - backend in Python (FastAPI), frontend in Angular.
-- Time Tracker App - full-stack application, backend in Python, frontend in Jinja and Javascript.
+- [Time Tracker App](3.Semester/PYT/Semestral%20Work) - full-stack application, backend in Python, frontend in Jinja and Javascript.
 - Dungeon Keeper Database - PostgreSQL database.
 - [Pacman Game](2.Semester/PA2%20(2022)/Semestral%20Work) - C/C++ with using SDL graphics library.
 
