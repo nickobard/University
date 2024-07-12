@@ -73,7 +73,7 @@ framework for interactivity,
 - [Jinja2](https://jinja.palletsprojects.com/en/3.1.x/) template language.
 
 
-### Other used libraries:
+Other used libraries:
 - [Pandas](https://pandas.pydata.org/) (and a little bit [numpy](https://numpy.org/)) - for manipulation with time entries data
 - [Plotly](https://plotly.com/) - for charts visualisation
 
@@ -89,6 +89,18 @@ There are 4 working pages:
 ## API:
 
 You can find server API on [/docs](http://localhost:8000/docs) page, from there you can also try some methods using generated OpenAPI interface.
+
+## Database:
+
+Application uses PostgreSQL database. Planned database scheme is as follows:
+
+![db.png](docs/images/db.png)
+
+But this application is much more simple, and uses only one entity - Time Entries. The presented scheme above can be used for extension of the application.
+
+Current database scheme:
+
+![devdb.png](docs/images/devdb.png)
 
 ## Report:
 

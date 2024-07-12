@@ -1,0 +1,301 @@
+{
+  "entities": [
+    {
+      "name": "Project",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_project",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "label_color",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "status",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Session",
+      "parent": null,
+      "attr": []
+    },
+    {
+      "name": "Tag",
+      "parent": null,
+      "attr": [
+        {
+          "name": "name",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Task",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_task",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "status",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "Time_entry",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_entry",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "date_start",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "date_end",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_user",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "max_sessions",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "password",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "username",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ]
+    }
+  ],
+  "relations": [
+    [
+      {
+        "entity": "Task",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null
+      },
+      {
+        "entity": "Project",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": "15c158cb6bfe01916bfe0191fe8a3365"
+      },
+      {
+        "entity": "Project",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": "15c158cb6bfe01916bfe0191fe8a3365"
+      },
+      {
+        "entity": "Task",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null
+      },
+      {
+        "entity": "Tag",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      },
+      {
+        "entity": "Session",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 1,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "User",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      },
+      {
+        "entity": "Project",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "User",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      },
+      {
+        "entity": "Session",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "User",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      },
+      {
+        "entity": "Tag",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "User",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null
+      },
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null
+      }
+    ]
+  ],
+  "notes": [
+    {
+      "text": "IO1: Two different users\ncannot have sessions with\nsame time entry"
+    },
+    {
+      "text": "IO2: Each user can have only\nmax_sessions amount of sessions"
+    },
+    {
+      "text": "IO3: If time entry has date_end\nattribute == null, then it must\nbe in session. If date_end !=null,\nthen time entry never can be in\nsession."
+    }
+  ]
+}

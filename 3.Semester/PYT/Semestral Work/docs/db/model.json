@@ -1,0 +1,637 @@
+{
+  "entities": [
+    {
+      "name": "Project",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_project",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "status",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "label_color",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1028.183570570416,
+        "y": 471.4178768661287,
+        "width": 110,
+        "height": 97.79997634887695
+      }
+    },
+    {
+      "name": "Session",
+      "parent": null,
+      "attr": [],
+      "transform": {
+        "x": 494.4335705704159,
+        "y": 491.4178768661287,
+        "width": 106.25,
+        "height": 52.349998474121094
+      }
+    },
+    {
+      "name": "Tag",
+      "parent": null,
+      "attr": [
+        {
+          "name": "name",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1104.933570570416,
+        "y": 269.1678768661287,
+        "width": 112.5,
+        "height": 63.75
+      }
+    },
+    {
+      "name": "Task",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_task",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "name",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "status",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1028.683570570416,
+        "y": 640.4178768661287,
+        "width": 113.75,
+        "height": 83.75
+      }
+    },
+    {
+      "name": "Time_entry",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_entry",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "date_start",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "date_end",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 698.8273286289639,
+        "y": 472.79726317193774,
+        "width": 131.25,
+        "height": 90
+      }
+    },
+    {
+      "name": "User",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_user",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "username",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "password",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "max_sessions",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 690.0773286289639,
+        "y": 284.04726317193774,
+        "width": 150,
+        "height": 92.5
+      }
+    }
+  ],
+  "relations": [
+    [
+      {
+        "entity": "Task",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "must be assigned to a project",
+        "transform": {
+          "anchor": {
+            "x": 1084.1905286043054,
+            "y": 640.4178768661287,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1084.19747984324,
+              "y": 604.8178650405672
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Project",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "can have many tasks",
+        "transform": {
+          "anchor": {
+            "x": 1084.2044310821746,
+            "y": 569.2178532150057,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1084.19747984324,
+              "y": 604.8178650405672
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": "15c158cb6bfe01916bfe0191fe8a3365",
+        "name": "can be assigned to a task, or to a project",
+        "transform": {
+          "anchor": {
+            "x": 780.4778428739971,
+            "y": 562.7972631719377,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 780.4778428739971,
+              "y": 621.4986422922876
+            },
+            {
+              "x": 780.4778428739971,
+              "y": 684.5794077184465
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Task",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "can have many time entries",
+        "transform": {
+          "anchor": {
+            "x": 1028.683570570416,
+            "y": 684.5794077184465,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 780.4778428739971,
+              "y": 684.5794077184465
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": "15c158cb6bfe01916bfe0191fe8a3365",
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 830.0773286289639,
+            "y": 517.7972631719377,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 932.1304495996899,
+              "y": 518.4623395022419
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Project",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "can have many time entries",
+        "transform": {
+          "anchor": {
+            "x": 1028.183570570416,
+            "y": 519.127415832546,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 932.1304495996899,
+              "y": 518.4623395022419
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "can have many tags",
+        "transform": {
+          "anchor": {
+            "x": 797.7044072813458,
+            "y": 472.79726317193774,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 797.7044072813458,
+              "y": 421.1178738143709
+            },
+            {
+              "x": 975.2044072813458,
+              "y": 421.11780514982013
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Tag",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "can tag many entries",
+        "transform": {
+          "anchor": {
+            "x": 1152.7044072813458,
+            "y": 332.9178768661287,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1152.7044072813458,
+              "y": 421.11773648526935
+            },
+            {
+              "x": 975.2044072813458,
+              "y": 421.11780514982013
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 698.8273286289639,
+            "y": 517.7972631719377,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 649.7554495996899,
+              "y": 517.7825692560938
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Session",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 600.6835705704159,
+            "y": 517.7678753402498,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 649.7554495996899,
+              "y": 517.7825692560938
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "User",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "can have many projects",
+        "transform": {
+          "anchor": {
+            "x": 840.0773286289639,
+            "y": 333.7955778505558,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1054.7044072813458,
+              "y": 333.7955778505558
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Project",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "must be created by a user",
+        "transform": {
+          "anchor": {
+            "x": 1054.7044072813458,
+            "y": 471.4178768661287,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1054.7044072813458,
+              "y": 333.7955778505558
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "User",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "can have many time entries",
+        "transform": {
+          "anchor": {
+            "x": 765.0773286289639,
+            "y": 376.54726317193774,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 765.0842784216964,
+              "y": 424.67226317193774
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Time_entry",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 765.0912282144288,
+            "y": 472.79726317193774,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 765.0842784216964,
+              "y": 424.67226317193774
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "User",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "can have max_session sessions",
+        "transform": {
+          "anchor": {
+            "x": 690.0773286289639,
+            "y": 328.7678753402498,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 540.3085972732968,
+              "y": 328.7678753402498
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Session",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "session is run by a user",
+        "transform": {
+          "anchor": {
+            "x": 540.3085972732968,
+            "y": 491.4178768661287,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 540.3085972732968,
+              "y": 328.7678753402498
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "User",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "cna have many tags",
+        "transform": {
+          "anchor": {
+            "x": 840.0773286289639,
+            "y": 301.04389252917383,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 972.5054495996899,
+              "y": 301.0433846976513
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Tag",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "relation",
+        "transform": {
+          "anchor": {
+            "x": 1104.933570570416,
+            "y": 301.0428768661287,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 972.5054495996899,
+              "y": 301.0433846976513
+            }
+          ],
+          "manual": false
+        }
+      }
+    ]
+  ],
+  "notes": [
+    {
+      "text": "IO1: Two different users\ncannot have sessions with\nsame time entry",
+      "transform": {
+        "x": 375.30859727329675,
+        "y": 365.4159311321047,
+        "width": 141.1875,
+        "height": 57
+      }
+    },
+    {
+      "text": "IO2: Each user can have only\nmax_sessions amount of sessions",
+      "transform": {
+        "x": 451.05859727329675,
+        "y": 272.1012086735832,
+        "width": 181.15000915527344,
+        "height": 43
+      }
+    },
+    {
+      "text": "IO3: If time entry has date_end\nattribute == null, then it must\nbe in session. If date_end !=null,\nthen time entry never can be in\nsession.",
+      "transform": {
+        "x": 565.0585972732968,
+        "y": 583.3678738143709,
+        "width": 171.5,
+        "height": 100
+      }
+    }
+  ]
+}
