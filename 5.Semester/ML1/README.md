@@ -1,5 +1,7 @@
 # Machine Learning 1
 
+TODO - see also ML2 - and link there
+
 ## SYNOPSIS
 The goal of this course is to introduce students to the basic methods of machine learning. They get theoretical understanding and practical working knowledge of regression and classification models in the supervised learning scenario and clustering models in the unsupervised scenario. Students will be aware of the relationships between model bias and variance, and know the fundamentals of assessing model quality. Moreover, they learn the basic techniques of data preprocessing and multidimensional data visualization. In practical demonstrations, pandas and scikit libraries in Python will be used.
 

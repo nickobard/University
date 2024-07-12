@@ -13,11 +13,13 @@ List of the most interesting, big and relevant projects and courses.
 - Wizview - Team SW Project - backend in Python (FastAPI), frontend in Angular.
 - [Time Tracker App](3.Semester/PYT/Semestral%20Work) - full-stack application, backend in Python, frontend in Jinja and Javascript.
 - Dungeon Keeper Database - PostgreSQL database.
-- [Pacman Game](2.Semester/PA2%20(2022)/Semestral%20Work) - C/C++ with using SDL graphics library.
+- [Pacman Game](2.Semester/PA2%20(2022)/Semestral%20Work) - C++ with using SDL graphics library.
 
 ## Courses
 
-Each link leads to course annotation and syllabus, and source code (**bold font with '*'** indicates available source code).
+Each link leads to course annotation and syllabus, and source code.
+
+**Bold font with '*'** indicates available source code.
 
 ### 1. Semester
 - [**\* PA1 - Programming and Algorithmics 1**](1.Semester/PA1)

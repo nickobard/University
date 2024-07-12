@@ -1,0 +1,11 @@
+<mat-card style="display: flex; align-items: center; margin-bottom: 15px; min-width: 600px">
+    <mat-card-header>
+      <mat-card-title>{{textToShow}}</mat-card-title>
+    </mat-card-header>
+      <app-basic-text-input #textInput *ngIf="textIsSelected" (inputTextChanged)="onInputTextChanged($event)"></app-basic-text-input>
+    <mat-card-actions>
+      <app-simple-button [btnText]="btnHighlightText" *ngIf="textIsSelected" (click)="highlightSelectedText()"></app-simple-button>
+      <app-simple-button [btnText]="btnUnselectTxt" *ngIf="textIsSelected" (click)="deleteSelection()"></app-simple-button>
+      <app-simple-button [btnText]="btnPostDiscussionTxt" *ngIf="textIsSelected" (click)="postDiscussion()" ></app-simple-button>
+    </mat-card-actions>
+  </mat-card>
