@@ -1,66 +1,111 @@
 #pragma once
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <iostream>
 
-constexpr int SCREEN_HEIGHT = 1000;
-constexpr int SCREED_WIDTH = 1000;
+constexpr int SCREEN_HEIGHT = 340;
+constexpr int SCREED_WIDTH = 1080;
+
 /**
  * @brief Class that initialize overall graphics for the game.
- * 
  * Initialize window, renderer, and clearing and rendering on the screen.
- * 
  */
 class GameGraphics {
-  public:
-    // Construct a new Game Graphics object.
-    // Sets window and renderer with nullptr. Then initiates
-    // graphics of the game.
+
+public:
+
+    /**
+     * @brief Construct a new Game Graphics object.
+     * Initiates graphics of the game - window, renderer etc.
+     */
     GameGraphics();
-    // Destroy with calling QuitGameGraphics();
+
+    /**
+     * @brief Destroy game graphics object.
+     */
     ~GameGraphics();
-    // Clear the screen from all rendered objects 
-    // with background color.
+
+    /**
+     * @brief Clear the screen from all rendered objects.
+     */
     void ClearRender();
-    // Shows all current rendererd game objects with current
-    // renderer.
+
+    /**
+     * @brief Shows all current rendered game objects on the screen.
+     */
     void RenderGame();
-    // Gets the renderer of the Game Graphics service.
-    inline SDL_Renderer * GetRenderer();
-  private:
+
+    /// Gets the renderer.
+    inline SDL_Renderer *GetRenderer();
+
+private:
+
     /**
      * @brief Initialize SDL and create window with renderer.
-     * 
-     * Sets renderDrawColor to black. Expects that that this isn't changed.
+     * Sets renderDrawColor to black.
      */
     void InitGameGraphics();
-    // Initialize SDL libraries.
-    bool InitSDL() const;
-    // Inits IMG library and returns true on success.
-    bool InitIMG() const;
-    // Sets different settigns for SDL.
-	  // Set render quality to anizotrophic linear filtration
-    void SetSDLSettings() const;
-    // Creates game window and renderer.
+
+    /**
+     * @brief Initialize SDL libraries.
+     * @return true if success.
+     */
+    static bool InitSDL();
+
+    /**
+     * @brief Inits IMG library and returns true on success.
+     * @return true if success.
+     */
+    static bool InitIMG();
+
+    /**
+     * @brief Sets different settings for SDL.
+     * Sets render quality to anisotropic linear filtration
+     */
+    static void SetSDLSettings();
+
+    /**
+     * @brief Creates game window and renderer.
+     * @return true if success.
+     */
     bool CreateGameGraphics();
-    // Initializes and creates game window.
+
+    /**
+     * @brief Initializes and creates game window.
+     * @return true if success.
+     */
     bool CreateGameWindow();
-    // Initializes and creates game renderer for current window.
+
+    /**
+     * @brief Initializes and creates game renderer for current window.
+     * @return true if success.
+     */
     bool CreateGameRenderer();
-    // Destroy window and renderer and quit SDL
+
+    /**
+     * @brief Destroy window and renderer and quits SDL.
+     */
     void QuitGameGraphics();
-    // Set the window renderer to white color.
+
+    /**
+     * @brief Set the window renderer's default color to white.
+     */
     void SetScreenBackgroundWhite();
-    // Set the window renderer to black color.
+
+    /**
+     * @brief Set the window renderer's default color to black.
+     */
     void SetScreenBackgroundBlack();
-    // Represents game window.
-    SDL_Window * window_;
-    // Represents game renderer for the current window.
-    SDL_Renderer * renderer_;
+
+    /// Represents game window.
+    SDL_Window *window_;
+    /// Represents game renderer for the current window.
+    SDL_Renderer *renderer_;
 
 };
 
 inline
-SDL_Renderer * GameGraphics::GetRenderer(){
-  return renderer_;
+SDL_Renderer *GameGraphics::GetRenderer() {
+    return renderer_;
 }

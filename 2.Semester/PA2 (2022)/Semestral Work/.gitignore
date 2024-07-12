@@ -1,0 +1,28 @@
+# Ignore everything
+*
+
+# Except these files and extensions...
+
+# Source files:
+!*.cpp
+!*.hpp
+!*.inl
+
+# Assets files:
+!assets/*
+!assets/maps/*
+
+# Git files:
+!.gitignore
+
+# Build files:
+!Makefile
+!Doxyfile
+
+# Other files:
+!README.md
+
+# ... in these directories
+!src/
+!src/**/
+!assets/

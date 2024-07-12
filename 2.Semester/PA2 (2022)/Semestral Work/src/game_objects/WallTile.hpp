@@ -1,34 +1,26 @@
 #pragma once
+
 #include "Tile.hpp"
 
 /**
  * @brief Class that represents Wall tile subclass of the
  * Tile superclass.
- * 
  */
 class WallTile : public Tile {
-  
-  public:
-    
+
+public:
+
     /**
      * @brief Construct a new Wall Tile object.
-     * 
-     * @param texture texture for graphics component to render the tile.
+     * @param texture for graphics component to render the tile.
+     * @param position where tile should be rendered.
      */
-    WallTile(Texture * texture);
+    WallTile(Texture *texture, const Vector2<float> &position);
 
-    /**
-     * @brief Render tile on the screen.
-     * 
-     * @param position where the tile should be rendered in pixels.
-     */
-    void Render( Vector2<float> position ) override;
+    [[nodiscard]]
+    bool isObstacle() const override;
 
-    /**
-     * @brief Get the type of the polymorphic tile.
-     * 
-     * @return int number of the enum Tile Types.
-     */
-    int GetType() override;
+    [[nodiscard]]
+    TileType GetType() const override;
 
 };

@@ -1,29 +1,50 @@
 #pragma once
+
 #include "GameActor.hpp"
+
 /**
  * @brief Pacman class - concrete specification of the GameActor,
  * which defines its moving algorithms and what it does.
- * 
  */
 class Pacman : public GameActor {
-  public:
-    // Pacman constructor - takes components to construct GameActor abstract class
-    Pacman (TransformComponent * transform, GraphicsComponent * graphics);
-    // Default destructor - destruction is already handled in the GameActor abstract class
-    ~Pacman() override = default;
-    // Change game object's moving direction to up
-    void TurnUp()      override;
-    // Change game object's moving direction to down
-    void TurnDown()    override;
-    // Change game object's moving direction to right
-    void TurnRight()   override;
-    // Change game object's moving direction to left
-    void TurnLeft()    override;
-    // Change game object's moving to stop and don't move
-    void StopMoving()  override;
 
-    // Update function to update state of this gameObject
+public:
+
+    /**
+     * @brief Pacman constructor - takes components to construct pacman object. O(1).
+     * @param transform transform component of the object.
+     * @param graphics graphics component of the object.
+     */
+    Pacman(TransformComponent *transform, GraphicsComponent *graphics);
+
+    void TurnUp() override;
+
+    void TurnDown() override;
+
+    void TurnRight() override;
+
+    void TurnLeft() override;
+
+    void StopMoving() override;
+
+    void Move() override;
+
+    void TurnTo(const Vector2<float> &direction) override;
+
     void Update() override;
-    // Render function to render this object using its transform position
-    void Render() override;
+
+    void Render() const override;
+
+    /**
+     * @brief Change direction if there are no possible
+     * collisions with other game objects. O(1).
+     * @param direction new direction of the game object.
+     */
+    void TryChangeDirection(const Vector2<float> &newDirection);
+
+    /**
+     * @brief Collects bonus on the current tile node.
+     */
+    void CollectBonus();
+
 };

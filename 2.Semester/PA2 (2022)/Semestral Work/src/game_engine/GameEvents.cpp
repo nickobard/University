@@ -1,18 +1,19 @@
 #include "GameEvents.hpp"
 
 GameEvents::GameEvents()
-: quit_ (false)
-{}
+        : quit_(false) {}
 
 void GameEvents::ProcessInput() {
-  //Handle events on queue
-  while ( !hasEmptiedEventQueue()){
-    //User requests quit
-    if ( isQuitEvent())
-      QuitGame();
-  }
+    bool notEmptyEventQueue = true;
+    //Handle events on queue
+    while (notEmptyEventQueue) {
+        notEmptyEventQueue = SDL_PollEvent(&event_);
+        //User requests quit
+        if (isQuitEvent())
+            QuitGame();
+    }
 }
 
 void GameEvents::QuitGame() {
-  quit_ = true;
+    quit_ = true;
 }

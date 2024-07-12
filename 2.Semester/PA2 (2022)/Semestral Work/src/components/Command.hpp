@@ -1,30 +1,47 @@
 #pragma once
+
 #include "../game_objects/GameActor.hpp"
 
-// Class which represents commands executed with given actors
-struct Command {
-  // Virtual destructor for derived classes
-  virtual ~Command() = default;
-  // Executes command on the actor
-  virtual void Execute(GameActor * actor) const = 0;
+/**
+ * @brief Class which represents commands executed with given game actor object.
+ */
+class Command {
+public:
+    virtual ~Command() = default;
+
+    /**
+     * @brief Executes command with give actor.
+     * @param actor which should execute the command.
+     */
+    virtual void Execute(GameActor *actor) = 0;
 };
 
-struct TurnUpCommand : public Command {
-  void Execute(GameActor * actor) const override;
+class TurnUpCommand : public Command {
+public:
+    void Execute(GameActor *actor) override;
 };
 
-struct TurnDownCommand : public Command {
-  void Execute(GameActor * actor) const override;
+class TurnDownCommand : public Command {
+public:
+    void Execute(GameActor *actor) override;
 };
 
-struct TurnRightCommand : public Command {
-  void Execute(GameActor * actor) const override;
+class TurnRightCommand : public Command {
+public:
+    void Execute(GameActor *actor) override;
 };
 
-struct TurnLeftCommand : public Command {
-  void Execute(GameActor * actor) const override;
+class TurnLeftCommand : public Command {
+public:
+    void Execute(GameActor *actor) override;
 };
 
-struct StopMoveCommand : public Command {
-  void Execute(GameActor * actor) const override;
+class StopMoveCommand : public Command {
+public:
+    void Execute(GameActor *actor) override;
+};
+
+class MoveCommand : public Command {
+public:
+    void Execute(GameActor *actor) override;
 };

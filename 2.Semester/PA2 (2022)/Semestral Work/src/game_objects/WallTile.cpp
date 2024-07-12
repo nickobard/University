@@ -1,13 +1,12 @@
 #include "WallTile.hpp"
 
-WallTile::WallTile(Texture * texture)
-: Tile(texture)
-{}
+WallTile::WallTile(Texture *texture, const Vector2<float> &position)
+        : Tile(texture, position) {}
 
-void WallTile::Render( Vector2<float> position){
-  graphics_->Render(position);
-} 
+TileType WallTile::GetType() const {
+    return TileType::WALL;
+}
 
-int WallTile::GetType(){
-  return WALL_TILE;
+bool WallTile::isObstacle() const {
+    return true;
 }

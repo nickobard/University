@@ -1,13 +1,35 @@
 #include "EmptyTile.hpp"
 
-EmptyTile::EmptyTile(Texture * texture)
-: Tile(texture)
-{}
+EmptyTile::EmptyTile(Texture *texture, const Vector2<float> &position)
+        : Tile(texture, position)
+          , bonus_(nullptr) {}
 
-void EmptyTile::Render( Vector2<float> position){
-  graphics_->Render(position);
-} 
+EmptyTile::~EmptyTile() {
+    delete bonus_;
+}
 
-int EmptyTile::GetType(){
-  return EMPTY_TILE;
+void EmptyTile::Render() const {
+    graphics_->Render(transform_->position_);
+    if (bonus_ != nullptr)
+        bonus_->Render(transform_->position_);
+}
+
+TileType EmptyTile::GetType() const {
+    return TileType::EMPTY;
+}
+
+bool EmptyTile::CanTurnAside(const GameActor &gameActor) const {
+    return false;
+}
+
+bool EmptyTile::AddBonus(Bonus *bonus) {
+    delete bonus_;
+    bonus_ = bonus;
+    return true;
+}
+
+bool EmptyTile::CollectBonus() {
+    delete bonus_;
+    bonus_ = nullptr;
+    return true;
 }

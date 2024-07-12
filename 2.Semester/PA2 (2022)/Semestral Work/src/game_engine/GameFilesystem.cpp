@@ -1,50 +1,35 @@
 #include "GameFilesystem.hpp"
 
-GameFilesystem::GameFilesystem()
-{
-  InitTextures();
-  LoadTextures();
+GameFilesystem::GameFilesystem() {
+    InitTextures();
 }
 
-GameFilesystem::~GameFilesystem(){
-  FreeTextures();
+void GameFilesystem::InitTextures() {
+
+    LoadTexture(TextureType::PACMAN, "assets/pacman.png", TextureSizes::ACTOR);
+    LoadTexture(TextureType::GHOST, "assets/ghost.png", TextureSizes::ACTOR);
+    LoadTexture(TextureType::WALL, "assets/walltile.png", TextureSizes::TILE);
+    LoadTexture(TextureType::EMPTY, "assets/void.png", TextureSizes::TILE);
+    LoadTexture(TextureType::CROSS, "assets/void.png", TextureSizes::TILE);
+    LoadTexture(TextureType::TUNNEL, "assets/void.png", TextureSizes::TILE);
+    LoadTexture(TextureType::BONUS, "assets/bonus.png", TextureSizes::BONUS);
 }
 
-void GameFilesystem::LoadTextures(){
-  LoadTexture(textures_[PACMAN_TEXTURE],"assets/pacman.png",{40,40});
-  LoadTexture(textures_[GHOST_TEXTURE],"assets/ghost.png",{40,40});
-  LoadTexture(textures_[WALL_TILE_TEXTURE],"assets/walltile.png",{20,20});
-  LoadTexture(textures_[EMPTY_TILE_TEXTURE],"assets/emptytile.png",{20,20});
+void GameFilesystem::LoadTexture(TextureType type, const string &path) {
+    Texture newTexture;
+    if (!newTexture.LoadTexture(path)) {
+        cerr << "Filesystem error: Could not load texture: " + path << endl;
+        throw exception();
+    }
+    textures_.emplace(type, std::move(newTexture));
 }
 
-void GameFilesystem::FreeTextures(){
-  for ( size_t texture = 0; texture < MAX_TEXTURES_NUMBER; texture++ ){
-    if (notNullTexture(textures_[texture]))
-      delete textures_[texture]; 
-  }
+void GameFilesystem::LoadTexture(TextureType type, const string &path, const TextureSize<float> &size) {
+    Texture newTexture;
+    if (!newTexture.LoadTexture(path, size)) {
+        cerr << "Error: Could not load texture: " + path << endl;
+        throw exception();
+    }
+    textures_.emplace(type, std::move(newTexture));
 }
 
-void GameFilesystem::LoadTexture(Texture *& texture, const string & path){
-  texture = new Texture;
-  if ( !texture->LoadTexture(path)){
-    delete texture;
-    texture = &nullTexture_;
-  }
-}
-
-void GameFilesystem::LoadTexture(Texture *& texture, const string & path, const TextureSize<float> & size){
-  texture = new Texture;
-  if ( !texture->LoadTexture(path, size)){
-    delete texture;
-    texture = &nullTexture_;
-  }
-}
-
-bool GameFilesystem::notNullTexture(Texture * texture) const {
-  return texture != &nullTexture_;
-}
-
-void GameFilesystem::InitTextures(){
-  for ( size_t texturePosition = 0; texturePosition < MAX_TEXTURES_NUMBER; texturePosition++ )
-    textures_[texturePosition] = &nullTexture_;
-}

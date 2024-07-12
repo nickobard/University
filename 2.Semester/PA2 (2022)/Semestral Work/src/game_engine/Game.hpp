@@ -1,65 +1,105 @@
 #pragma once
+
 #include <vector>
+#include <iostream>
+
+using namespace std;
+
 #include "../components/ControllerComponent.hpp"
 #include "../components/PlayerController.hpp"
+#include "../components/AI_components/AIComponent.hpp"
 #include "../game_objects/GameObject.hpp"
 #include "../game_objects/Pacman.hpp"
+#include "../game_objects/Ghost.hpp"
 #include "../game_objects/Controller.hpp"
 #include "GameGraphics.hpp"
 #include "GameTime.hpp"
-#include "GameLocator.hpp"
 #include "GameEvents.hpp"
-#include <iostream>
-using namespace std;
+
+
 /**
- * @brief Class which represents the game, starting it, looping and quiting on the users input.
- * 
+ * @brief Class which represents the game, initializing, starting,
+ * updating, rendering and quiting the game.
  */
 class Game {
-  public:
-    // Constructs Game object.
+
+public:
+
+    /**
+     * @brief Constructs Game object.
+     */
     Game() = default;
+
     /**
      * @brief Destroy the Game object.
-     * 
      * Use gameClose() method to clean the game.
      */
     ~Game();
-    // Starts the game - game loop and run until quit.
+
+    /**
+     * @brief Starts the game - game loop and run until quit.
+     */
     void GameStart();
-  private:
-    // Initialize and loads the game with textures,
-    // game objects and other services.
+
+    /**
+     * @brief Quits game.
+     */
+    void QuitGame();
+
+    /// Container for all GameControllers in the game.
+    vector<Controller *> gameControllers_;
+
+private:
+
+    /**
+     * @brief Initializes and loads the game with textures,
+     * game objects and other services from game locator.
+     */
     void GameInit();
-    // Initialize game locator with service before game actually starts.
-    void InitGameLocator() const;
-    // Initialize game objects for the game.
+
+    /**
+     * @brief Initialize game locator with services before game actually starts.
+     */
+    void InitGameLocator();
+
+    /**
+     * @brief Initialize game objects for the game.
+     */
     void InitGameObjects();
+
     /**
      * @brief Game loop - updates the game every frame.
-     * 
      * The heart of the game. Don't break it.
      */
     void GameLoop();
-    // Render game and game objects.
+
+    /**
+     * @brief Render game and game objects.
+     */
     void RenderGame();
-    // Prepare all game objctes to show on the screen,
-    // rendering them.
+
+    /**
+     * @brief Prepare all game objctes to show on the screen, rendering them.
+     */
     void RenderGameObjects();
-    // Updates input events and objects.
+
+    /**
+     * @brief Updates input events and objects.
+     */
     void UpdateGame();
-    // Update game mechanics - each object.
+
+    /**
+     * @brief Update game mechanics - each object.
+     */
     void UpdateGameObjects();
-    // Frees all objects and then services.
-    void FreeGame();
-    // Frees all allocated game objects.
+
+    /**
+     * @brief Frees all allocated game objects.
+     */
     void FreeGameObjects();
-    // Frees game locator with all its runnign services.
-    void FreeGameLocator();
-    // Game events object - to handle event quiery from user.
+
+    /// Game events object - to handle event queue from user.
     GameEvents events_;
-    // Container for all gameActors in the game.
-    vector<GameActor *> gameActors_;    
-    // Container for all GameControllers in the game.
-    vector<Controller *> gameControllers_;
+    /// Container for all gameActors in the game.
+    vector<GameActor *> gameActors_;
 };

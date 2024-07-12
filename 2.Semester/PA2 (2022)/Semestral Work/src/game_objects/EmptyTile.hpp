@@ -1,34 +1,39 @@
 #pragma once
+
 #include "Tile.hpp"
 
 /**
  * @brief Class that represents Empty tile subclass of the
  * Tile superclass.
- * 
  */
 class EmptyTile : public Tile {
-  
-  public:
-    
+
+public:
+
     /**
      * @brief Construct a new Empty Tile object.
-     * 
-     * @param texture texture for graphics component to render the tile.
+     * @param texture for graphics component to render the tile.
+     * @param position where tile will be rendered in the world.
      */
-    EmptyTile(Texture * texture);
+    EmptyTile(Texture *texture, const Vector2<float> &position);
 
-    /**
-     * @brief Render tile on the screen.
-     * 
-     * @param position where the tile should be rendered in pixels.
-     */
-    void Render( Vector2<float> position ) override;
+    ~EmptyTile() override;
 
-    /**
-     * @brief Get the type of the polymorphic tile.
-     * 
-     * @return int number of the enum Tile Types.
-     */
-    int GetType() override;
+    void Render() const override;
+
+    bool AddBonus(Bonus *bonus) override;
+
+    bool CollectBonus() override;
+
+    [[nodiscard]]
+    TileType GetType() const override;
+
+    [[nodiscard]]
+    bool CanTurnAside(const GameActor &gameActor) const override;
+
+protected:
+
+    /// Bonus on the tile.
+    Bonus *bonus_;
 
 };

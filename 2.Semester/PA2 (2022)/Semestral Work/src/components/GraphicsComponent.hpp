@@ -1,22 +1,41 @@
 #pragma once
+
 #include "../structures/Texture.hpp"
 
 class GraphicsComponent {
-  public:
+
+public:
+
     /**
-     * @brief Construct a new Graphics Component object
-     * 
-     * @param texture - texture provided by the filesystem
+     * @brief Construct a new Graphics Component object. O(1).
+     * @param texture - texture provided by the filesystem.
      */
-    GraphicsComponent(Texture * texture);
-    virtual ~GraphicsComponent () = default;
+    explicit GraphicsComponent(Texture *texture);
+
     /**
-     * @brief Render image each game frame onto the screen
-     * 
-     * @param position - position where to render on the screen in pixels
+     * @brief Destruct graphics component. O(1).
      */
-    virtual void Render(Vector2<float> position);
-  private:
-    // Texture to be set up and rendered
-    Texture * texture_;
+    virtual ~GraphicsComponent() = default;
+
+    /**
+     * @brief Render image each game frame onto the screen. O(1).
+     * @param position - position where to render on the screen in pixels.
+     */
+    virtual void Render(const Vector2<float> &position) const;
+
+    /**
+     * @brief Get the size of the texture graphics component is holding. O(1).
+     * @return reference to const texture size.
+     */
+    inline const TextureSize<float> &GetTextureSize() const;
+
+private:
+
+    /// Texture of the game object.
+    Texture *texture_;
+
 };
+
+inline const TextureSize<float> &GraphicsComponent::GetTextureSize() const {
+    return texture_->GetSize();
+}

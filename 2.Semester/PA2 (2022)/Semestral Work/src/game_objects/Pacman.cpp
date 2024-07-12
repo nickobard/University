@@ -1,37 +1,64 @@
 #include "Pacman.hpp"
+#include "../game_engine/GameLocator.hpp"
 
-
-Pacman::Pacman (TransformComponent * transform, GraphicsComponent * graphics)
-: GameActor (transform, graphics)
-{}
-
-void Pacman::TurnUp(){
-  transform_->SetDirection(UP);
-  transform_->SetDefaultVelocity();
-}      
-void Pacman::TurnDown(){
-  transform_->SetDirection(DOWN);
-  transform_->SetDefaultVelocity();
-
+Pacman::Pacman(TransformComponent *transform, GraphicsComponent *graphics)
+        : GameActor(transform, graphics, *this) {
+    physics_->currentNode_ = GameLocator::GetMap().GetMapInfo().playerSpawn_;
 }
-void Pacman::TurnRight(){
-  transform_->SetDirection(RIGHT);
-  transform_->SetDefaultVelocity();
 
+void Pacman::TurnUp() {
+    TryChangeDirection(Vector2<float>::Up());
 }
-void Pacman::TurnLeft(){
-  transform_->SetDirection(LEFT);
-  transform_->SetDefaultVelocity();
 
+void Pacman::TurnDown() {
+    TryChangeDirection(Vector2<float>::Down());
 }
-void Pacman::StopMoving(){
-  transform_->SetVelocity(0.0f);
+
+void Pacman::TurnRight() {
+    TryChangeDirection(Vector2<float>::Right());
+}
+
+void Pacman::TurnLeft() {
+    TryChangeDirection(Vector2<float>::Left());
+}
+
+void Pacman::StopMoving() {
+    state_ = STANDING;
 }
 
 void Pacman::Update() {
-  transform_->Translate();
-
+    CollectBonus();
 }
-void Pacman::Render() {
-  graphics_->Render(transform_->GetPosition());
+
+void Pacman::Render() const {
+    graphics_->Render(transform_->position_);
+}
+
+void Pacman::TurnTo(const Vector2<float> &direction) {
+    TryChangeDirection(direction);
+}
+
+void Pacman::TryChangeDirection(const Vector2<float> &newDirection) {
+
+    if (state_ == STANDING)
+        state_ = MOVING;
+
+    if (newDirection == transform_->direction_)
+        return;
+    else if (newDirection == transform_->direction_.ToBack())
+        transform_->direction_ = newDirection;
+    else if (physics_->currentNode_->CanTurnAside(*this) && !physics_->TouchesObstacle(newDirection))
+        transform_->direction_ = newDirection;
+}
+
+void Pacman::Move() {
+    if (state_ == MOVING) {
+        auto newPosition =
+                transform_->position_ + transform_->direction_ * (GameLocator::GetTime().GetDeltaTime() * velocity_);
+        physics_->Move(newPosition);
+    }
+}
+
+void Pacman::CollectBonus() {
+    physics_->currentNode_->CollectBonus();
 }

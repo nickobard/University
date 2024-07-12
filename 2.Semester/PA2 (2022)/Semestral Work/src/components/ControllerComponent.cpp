@@ -1,5 +1,4 @@
 #include "ControllerComponent.hpp"
 
-ControllerComponent::ControllerComponent(GameActor * actor)
-: actor_(actor)
-{}
+ControllerComponent::ControllerComponent(GameActor *actor)
+        : controlled_(actor) {}

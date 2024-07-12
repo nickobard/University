@@ -1,110 +1,70 @@
 #pragma once
+
+#include <unordered_map>
+
 #include "../structures/Texture.hpp"
 #include "../structures/TextureSize.hpp"
 #include "../game_objects/Tile.hpp"
 
+/// All texture types stored in the filesystem.
+enum class TextureType {
+    PACMAN, GHOST,
+    WALL, EMPTY, CROSS, TUNNEL,
+    BONUS
+};
+
+/// Namespace of all standard texture sizes used for game actors, tiles and other game object.
+namespace TextureSizes {
+
+    const TextureSize<float> ACTOR(40, 40);
+    const TextureSize<float> TILE(22, 22);
+    const TextureSize<float> BONUS(5, 5);
+}
+
 /**
  * @brief Game Filesystem Class which handles media loading and storage.
- * 
  * @details Stores textures and other flyweight data used across the game.
  * Handles loading and freeing data used in the game.
  */
 class GameFilesystem {
 
-  public:
-
-    /**
-     * @brief All texture types stored in the filesystem.
-     * 
-     */
-    enum TextureTypes {
-      PACMAN_TEXTURE,
-      GHOST_TEXTURE,
-      WALL_TILE_TEXTURE,
-      EMPTY_TILE_TEXTURE
-    };
+public:
 
     /**
      * @brief Constructs Game Filesystem and instantly loads all resourses.
-     * 
      */
     GameFilesystem();
 
-    /**
-     * @brief Destroys all resources, deallocating them.
-     * 
-     */
-    ~GameFilesystem();
+    /// Gets texture from filesystem of some texture type.
+    inline Texture *GetTexture(TextureType type);
+
+private:
 
     /**
-     * @brief Gets Pacman Texture.
-     * 
-     * @return Texture * texture of the pacman
-     */
-    inline Texture * GetTexture( const int type );
-
-  private:
-
-    /**
-     * @brief Allocates and loads textures for the game.
-     * 
-     */
-    void LoadTextures();
-
-    /**
-     * @brief Frees all allocated textures.
-     * 
-     */
-    void FreeTextures();
-
-    /**
-     * @brief Inits all textures with null texture.
-     * 
+     * @brief Loads all textures.
      */
     void InitTextures();
 
-
     /**
      * @brief Loads texture.
-     * 
-     * @param texture pointer to the texture which should be loaded.
-     * @param path relative path where texture lies on the disk.
+     * @param type represents type of the texture to be loaded.
+     * @param path represents relative path where texture lies on the disk.
      */
-    void LoadTexture(Texture *& texture, const string & path);
+    void LoadTexture(TextureType type, const string &path);
 
-    
     /** 
-     * @brief Loads texture.
-     * @details If not loaded texture, assign nullTexture
-     * @param texture pointer to the texture which should be loaded.
-     * @param path relative path where texture lies on the disk.
+     * @brief Loads all textures.
+     * @param type represents type of the texture to be loaded.
+     * @param path represents relative path where texture lies on the disk.
      * @param size of the rendered texture in pixels.
      */
-    void LoadTexture(Texture *& texture, const string & path, const TextureSize<float> & size);
+    void LoadTexture(TextureType type, const string &path, const TextureSize<float> &size);
 
-
-    /**
-     * @brief Check if texture wasn't set to null texture because of failed loading.
-     * 
-     * @param texture texture to be checked if is nullTexture. 
-     * @return true if it is a null texture.
-     * @return false if it is NOT a null texture.
-     */
-    bool notNullTexture(Texture * texture) const;
-
-
-    // Maximum number of textures in the game.
-    static constexpr size_t MAX_TEXTURES_NUMBER = 4;
-
-    // Null Texture if not successfuly loaded some texture.
-    Texture   nullTexture_;
-
-    // Pacman character texture.
-    Texture * textures_ [MAX_TEXTURES_NUMBER];
+    /// All loaded textures.
+    unordered_map<TextureType, Texture> textures_;
 
 };
 
-inline
-Texture * GameFilesystem::GetTexture( const int type ){
-  return textures_[type];
+inline Texture *GameFilesystem::GetTexture(TextureType type) {
+    return &textures_[type];
 }
