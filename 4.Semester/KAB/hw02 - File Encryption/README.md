@@ -1,4 +1,4 @@
-# Hash Function
+# File Encryption
 
 Your task is to implement two (or more) functions (not a complete program) that can encrypt and decrypt an image file in TGA format.
 
