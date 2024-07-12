@@ -1,41 +1,35 @@
-# PJV - Programming in Java
-
-## SYNOPSIS
-This course is presented in Czech.
-However, there is an English variant in the program Informatics (B1801 / 4753).
-
 ## COURSE CONTENTS
-Předmět Programování v Javě uvede studenty do objektově orientovaného programování v programovacím jazyku Java. Kromě samotného jazyka budou probrány základní knihovny pro práci se soubory, proudy, sítěmi, kolekcemi, databázemi a vícevláknové programování.
+The course Programming in Java introduces students to object-oriented programming in the Java programming language. In addition to the language itself, basic libraries for working with files, streams, networks, collections, databases, and multithreaded programming will be covered.
 
 ## GOALS OF STUDY
-Cílem je naučit studenty programovací jazyk Java a aktivní schopnost využívání základních knihoven Javy.
+The goal is to teach students the Java programming language and the active ability to use basic Java libraries.
 
 ## LECTURES SYLLABUS
-1. Úvod, historie jazyka Java, edice a verze, operátory a jejich priorita, první spustitelný kód.
-2. Klíčová slova, tvorba programu, jeho spuštění, pojmy třída, atribut, metoda, dědičnost a zapouzdření.
-3. Dědění mezi třídami, abstraktními třídami a rozhraními, dědičnost atributů, zastínění, překrytí, konstruktory.
-4. Polymorfismus, výjimky, jejich dělení, vytváření, šíření programem a ošetření.
-5. Pole, parametrizované třídy (genericita), kolekce, řazení, porovnávání, hashování.
-6. Vstup a výstup: Zjištění informací o OS, o souborovém systému, práce se soubory, textové a binární proudy, serializace.
-7. StreamAPI, lambda výrazy, funkční rozhraní.
-8. Vlákna: Vícevláknové aplikace, synchronizace vláken, jejich životní cyklus, priority, přerušení, běžné problémy.
-9. Síťování v Javě: Základní pojmy, rozdíly mezi TCP a UDP, třídy pro síťovou komunikaci, architektura klient-server.
-10. Tvorba GUI a knihovna JavaFX: její základní části a třídy, práce s FXML, responzitní design, rozložení prvků, ovládací prvky.
-11. JavaFX události, animace, přechody a transformace.
-12. Databáze: Základy relačních DB, připojení k DB pomocí Javy, třídy pro spouštění příkazů, zpracování dat získaných dotazy, datové typy SQL vs. datové typy Javy.
-13. (pokud má semestr 13 týdnů) Novinky v Javě 9 a novějších.
+1. Introduction, history of Java, editions and versions, operators and their precedence, first executable code.
+2. Keywords, program creation, its execution, concepts of class, attribute, method, inheritance, and encapsulation.
+3. Inheritance among classes, abstract classes and interfaces, attribute inheritance, shadowing, overriding, constructors.
+4. Polymorphism, exceptions, their division, creation, propagation through the program, and handling.
+5. Arrays, parameterized classes (generics), collections, sorting, comparison, hashing.
+6. Input and output: Getting information about the OS, the file system, working with files, text and binary streams, serialization.
+7. StreamAPI, lambda expressions, functional interfaces.
+8. Threads: Multithreaded applications, thread synchronization, their lifecycle, priorities, interruptions, common problems.
+9. Networking in Java: Basic concepts, differences between TCP and UDP, classes for network communication, client-server architecture.
+10. Creating GUI and the JavaFX library: its basic parts and classes, working with FXML, responsive design, layout of elements, controls.
+11. JavaFX events, animations, transitions, and transformations.
+12. Databases: Basics of relational databases, connecting to a DB using Java, classes for executing commands, processing data obtained from queries, SQL data types vs. Java data types.
+13. (if the semester has 13 weeks) New features in Java 9 and later.
 
 ## TUTORIALS SYLLABUS
-1. Úvod do předmětu, porovnání Javy vs C/C++, první spustitelný kód.
-2. Klíčové pojmy, první program, jeho spuštění, pojmy třída, atribut, metoda, dědičnost a zapouzdření, immutabilita.
-3. Dědění mezi třídami, abstraktními třídami a rozhraními, dědičnost atributů, zastínění, překrytí, konstruktory, pole.
-4. Základy kolekcí, přehled jejich typů, implementací a praktické použití, parametrizované třídy (genericita).
-5. Pokročilé kolekce, mapa a její implementace, hashování.
-6. Vstup a výstup: Práce se soubory, textové a binární proudy, serializace.
-7. StreamAPI, lambda výrazy, funkční rozhraní.
-8. Vlákna: Vícevláknové aplikace, synchronizace vláken, problém producent-konzument.
-9. Síťování v Javě: Základní pojmy, třídy pro síťovou komunikaci, praktické použití TCP s architekturou klient-server.
-10. Tvorba GUI a knihovna JavaFX: Práce s FXML, rozložení prvků, ovládací prvky, nástroje pro práci s JavaFX.
-11. Práce s JavaFX pomocí programovaní.
-12. Databáze: Základy relačních DB, připojení k DB pomocí Javy, třídy pro spouštění příkazů, zpracování dat získaných dotazy.
-13. (pokud má semestr 13 týdnů) Konzultace
+1. Introduction to the course, comparison of Java vs. C/C++, first executable code.
+2. Key concepts, first program, its execution, concepts of class, attribute, method, inheritance, encapsulation, immutability.
+3. Inheritance among classes, abstract classes and interfaces, attribute inheritance, shadowing, overriding, constructors, arrays.
+4. Basics of collections, overview of their types, implementations, and practical use, parameterized classes (generics).
+5. Advanced collections, map and its implementation, hashing.
+6. Input and output: Working with files, text and binary streams, serialization.
+7. StreamAPI, lambda expressions, functional interfaces.
+8. Threads: Multithreaded applications, thread synchronization, producer-consumer problem.
+9. Networking in Java: Basic concepts, classes for network communication, practical use of TCP with client-server architecture.
+10. Creating GUI and the JavaFX library: Working with FXML, layout of elements, controls, tools for working with JavaFX.
+11. Working with JavaFX through programming.
+12. Databases: Basics of relational databases, connecting to a DB using Java, classes for executing commands, processing data obtained from queries.
+13. (if the semester has 13 weeks) Consultations.
