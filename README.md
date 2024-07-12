@@ -37,7 +37,7 @@ Each link leads to course annotation and syllabus, and source code.
 - [SAP - Computer Structures and Architectures](2.Semester/SAP)
 - ANG1 - English Language Examination without Preparatory Courses
 ### 3. Semester
-- [**\* PYT - Python Programming**](3.Semester/)
+- [**\* PYT - Python Programming**](3.Semester/PYT)
 - [**\* PJV - Programming in Java**](3.Semester/PJV)
 - [**\* PHP - Programming in PHP**](3.Semester/PHP)
 - [**\* AG1 - Algorithms and Graphs 1**](3.Semester/AG1)
