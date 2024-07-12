@@ -36,7 +36,7 @@ Application is created using SDL graphic library.
 
 ![](docs/pacman_game.jpg)
 
-Also look at video how it works:
+Also look at video how it works (video in some moments is lagging, but it is recording lag, not of the game):
 [pacman_showcase.webm](docs%2Fpacman_showcase.webm)
 
 ### Installing Dependencies
