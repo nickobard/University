@@ -1,5 +1,8 @@
 # PA1 - Programming and Algorithmics 1
 
+- Homeworks - main tasks of the course.
+- Exercises - easier tasks for learning.
+
 ## SYNOPSIS
 Students gain the ability to formulate algorithms for solving basic problems and write them in the C language. They understand data types (simple, structured, pointers), expressions, statements, functions, concept of recursion. They learn to analyse simple cases of algorithm complexity. They know fundamental algorithms for searching, sorting, and manipulating with linked lists and trees.
 

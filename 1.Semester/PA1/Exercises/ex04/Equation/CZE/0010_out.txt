@@ -1,0 +1,2 @@
+Zadejte rovnici:
+2e-100 != 1e-100
