@@ -1,4 +1,5 @@
-For the second iteration, the database model is still very simple. It contains only a single entity, the document. The user can manipulate documents in a limited way.
-To work with the database, this application uses the SQLAlchemy library (https://www.sqlalchemy.org/).
+# Relational Database Scheme
+
+Current database scheme, only 3 entities are available. Other entities will be added in further application development.
 
 ![](images/rdm_1.png)
