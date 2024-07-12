@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Beyond Wonderland';
+    src: url('fonts/BeyondWonderland.ttf');
+}
+
+Button {
+    -fx-font-family: "Beyond Wonderland";
+    -fx-font-size: 28;
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(255, 255, 255, 0.75);
+
+}
+
+Button:hover {
+    -fx-font-family: "Beyond Wonderland";
+    -fx-font-size: 28;
+    -fx-background-color: transparent;
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+Label {
+    -fx-font-family: "Beyond Wonderland";
+    -fx-font-size: 74;
+}
+
+#mainMenu {
+    -fx-background-color: black;
+    -fx-background-image: url('images/background.jpg');
+    -fx-background-size: cover;
+}

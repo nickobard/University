@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../../assets/css/menu.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thedrake.ui.MenuController" fx:id="mainMenu">
+    <children>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0" spacing="30.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="100.0" prefWidth="400.0" text="The Drake" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="30.0" />
+                    </VBox.margin>
+                </Label>
+                <Button mnemonicParsing="false" onAction="#onTwoPlayersGame" prefHeight="40.0" prefWidth="200.0" text="Two players" textAlignment="CENTER" />
+                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Computer AI" textAlignment="CENTER" />
+                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Internet" textAlignment="CENTER" />
+                <Button mnemonicParsing="false" onAction="#onExit" prefHeight="40.0" prefWidth="200.0" text="Exit" textAlignment="CENTER" />
+            </children>
+        </VBox>
+    </children>
+</HBox>
