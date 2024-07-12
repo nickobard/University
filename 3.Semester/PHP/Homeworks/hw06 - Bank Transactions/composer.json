@@ -1,0 +1,16 @@
+{
+    "name": "bardanik/app",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nikita Bardatskii",
+            "email": "bardanik@fit.cvut.cz"
+        }
+    ],
+    "require": {}
+}

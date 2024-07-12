@@ -1,0 +1,25 @@
+{
+    "name": "bi-php/final-task",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "FinalTask\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-simplexml": "*",
+        "symfony/console": "^6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit src/Tests",
+        "checksum": "(find ./src -name '*Test.php' ; find ./bin -name '*.php') | xargs cat | bin/checksum.php",
+        "evaluate": "vendor/bin/phpunit --log-junit results.xml src/Tests/ ; bin/evaluate.php"
+    }
+}
