@@ -1,0 +1,42 @@
+<div>
+  <div
+    id="{{ commentID }}"
+    [ngStyle]="{ 'background-color': backgroundColor }"
+    class="comment"
+  >
+    <div>
+      <div>
+        <div>
+          <img class="img-state" src="{{ imgSrc }}" />
+        </div>
+        <div class="comment-body">
+          <h4
+            [ngClass]="{ shadow: true }"
+            [ngStyle]="{ color: textUsernameColor }"
+          >
+            {{ username }}
+          </h4>
+          <span [ngClass]="{ shadow: true }" [ngStyle]="{ color: textColor }">
+            {{ date }}
+          </span>
+        </div>
+      </div>
+
+      <p
+        id="text-comment"
+        [ngClass]="{ shadow: true }"
+        [ngStyle]="{ color: textColor }"
+      >
+        {{ textContent }}
+      </p>
+      <span
+        *ngIf="isSubmitter"
+        class="options-links"
+        (click)="changeStateClick()"
+        >{{ textSpanState }}</span
+      >
+      <span class="options-links">Open discussion</span>
+      <span *ngIf="isSubmitter" class="options-links">Delete</span>
+    </div>
+  </div>
+</div>

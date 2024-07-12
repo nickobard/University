@@ -1,0 +1,7 @@
+<div style="display: inline; width: 100%;">
+    <app-discussion-poster></app-discussion-poster>
+    <app-discussion-comment
+    *ngFor="let discussion of discussionsDataArray"
+    [discussionData]="discussion"
+    ></app-discussion-comment>
+</div>
