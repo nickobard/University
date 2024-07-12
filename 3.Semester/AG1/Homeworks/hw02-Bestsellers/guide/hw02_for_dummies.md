@@ -189,4 +189,8 @@ That's all! Good luck with your progtest!
 
 ### Bonus
 
-In the `tests` folder
+In the `tests` folder, you will find all the tests I used. I guarantee that these tests could not have appeared in the progtest from my side.
+
+**If you use these tests, change the method names!**
+This can be done using the text replacement function in any IDE, you can even use regular expressions to make changes more intelligently and quickly.
+
