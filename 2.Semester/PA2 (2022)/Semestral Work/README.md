@@ -83,3 +83,118 @@ Short showcase of documentation:
 ![documentation_main_page.png](docs/documentation_main_page.png)
 ![documentation_game_actor.png](docs/documentation_game_actor.png)
 ![documentation_game_manager.png](docs/documentation_game_manager.png)
+
+### Source Code Structure:
+
+```text
+├── components
+│   ├── AICommands.cpp
+│   ├── AICommands.hpp
+│   ├── AI_components
+│   │   ├── AIComponent.cpp
+│   │   ├── AIComponent.hpp
+│   │   ├── Blinky.cpp
+│   │   ├── Blinky.hpp
+│   │   ├── Clyde.cpp
+│   │   ├── Clyde.hpp
+│   │   ├── Inky.cpp
+│   │   ├── Inky.hpp
+│   │   ├── Pinky.cpp
+│   │   └── Pinky.hpp
+│   ├── AnimationComponent.cpp
+│   ├── AnimationComponent.hpp
+│   ├── Command.cpp
+│   ├── Command.hpp
+│   ├── ControllerComponent.cpp
+│   ├── ControllerComponent.hpp
+│   ├── GraphicsComponent.cpp
+│   ├── GraphicsComponent.hpp
+│   ├── PhysicsComponent.cpp
+│   ├── PhysicsComponent.hpp
+│   ├── PlayerController.cpp
+│   ├── PlayerController.hpp
+│   ├── TransformComponent.cpp
+│   └── TransformComponent.hpp
+├── game_engine
+│   ├── GameAudio.cpp
+│   ├── GameAudio.hpp
+│   ├── Game.cpp
+│   ├── GameEvents.cpp
+│   ├── GameEvents.hpp
+│   ├── GameFilesystem.cpp
+│   ├── GameFilesystem.hpp
+│   ├── GameGraphics.cpp
+│   ├── GameGraphics.hpp
+│   ├── Game.hpp
+│   ├── GameLocator.cpp
+│   ├── GameLocator.hpp
+│   ├── GameManager.cpp
+│   ├── GameManager.hpp
+│   ├── GameMap.cpp
+│   ├── GameMap.hpp
+│   ├── GameTime.cpp
+│   └── GameTime.hpp
+├── game_objects
+│   ├── Bonus.cpp
+│   ├── Bonus.hpp
+│   ├── Controller.cpp
+│   ├── Controller.hpp
+│   ├── CrossTile.cpp
+│   ├── CrossTile.hpp
+│   ├── EmptyTile.cpp
+│   ├── EmptyTile.hpp
+│   ├── GameActor.cpp
+│   ├── GameActor.hpp
+│   ├── GameObject.cpp
+│   ├── GameObject.hpp
+│   ├── Ghost.cpp
+│   ├── Ghost.hpp
+│   ├── NullTile.cpp
+│   ├── NullTile.hpp
+│   ├── Pacman.cpp
+│   ├── Pacman.hpp
+│   ├── PortalTile.cpp
+│   ├── PortalTile.hpp
+│   ├── Tile.cpp
+│   ├── Tile.hpp
+│   ├── TunnelTile.cpp
+│   ├── TunnelTile.hpp
+│   ├── WallTile.cpp
+│   └── WallTile.hpp
+├── game_states
+│   ├── GameState.cpp
+│   ├── GameState.hpp
+│   ├── GameStateNormal.cpp
+│   ├── GameStateNormal.hpp
+│   ├── GameStateOver.cpp
+│   ├── GameStateOver.hpp
+│   ├── GameStateReset.cpp
+│   └── GameStateReset.hpp
+├── main.cpp
+├── structures
+│   ├── MapParser.cpp
+│   ├── MapParser.hpp
+│   ├── MapReader.cpp
+│   ├── MapReader.hpp
+│   ├── NullTexture.cpp
+│   ├── NullTexture.hpp
+│   ├── Text.cpp
+│   ├── Text.hpp
+│   ├── Texture.cpp
+│   ├── Texture.hpp
+│   ├── TextureSize.hpp
+│   ├── TextureSize.inl
+│   ├── TileNodeBuilder.cpp
+│   ├── TileNodeBuilder.hpp
+│   ├── TileNode.cpp
+│   ├── TileNode.hpp
+│   ├── Vector2.hpp
+│   └── Vector2.inl
+└── UI
+    ├── Canvas.cpp
+    ├── Canvas.hpp
+    ├── UIElement.cpp
+    └── UIElement.hpp
+
+7 directories, 101 files
+```
