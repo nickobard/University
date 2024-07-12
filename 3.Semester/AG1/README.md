@@ -2,7 +2,6 @@
 
 - Homeworks - main tasks from the course.
 - Codeforces - additional tasks.
-- Proofs - theoretical tasks.
 
 ## SYNOPSIS
 The course covers the basics of efficient algorithm design, data structures, and graph theory, belonging to the core knowledge of every computing curriculum.
