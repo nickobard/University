@@ -1,0 +1,1655 @@
+{
+  "entities": [
+    {
+      "name": "Demon",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_vlastnika",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "hell_id",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "jmeno",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "vrstva_pekla",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "adresa",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "hellphone",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "hellmail",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 368.30586080586085,
+        "y": -387.2734114955574,
+        "width": 141.94873552621885,
+        "height": 138.29465321109694
+      }
+    },
+    {
+      "name": "Dobrodruh",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_dobrodruha",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "jmeno",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "class",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "lvl",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "rasa",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "hodnota_duse",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "stav",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 846.4545454545457,
+        "y": 519.4998389965269,
+        "width": 157.671875,
+        "height": 154.09723460177418
+      }
+    },
+    {
+      "name": "Dungeon",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_dungeonu",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "nazev",
+          "primary": false,
+          "unique": true,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "lvl",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "sila",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "hodnota",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "pomer_sila_k_hodnote",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 336.892857142857,
+        "y": -154.22341353006266,
+        "width": 215.91720581054688,
+        "height": 189.94997024536133
+      }
+    },
+    {
+      "name": "Mistnost",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_mistnosti",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "nazev",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "hodnota_pokladu",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "sila_ochrany",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 328.14285714285717,
+        "y": 115.28794642857144,
+        "width": 203,
+        "height": 303.9053067080325
+      }
+    },
+    {
+      "name": "Objednavka",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_objednavky",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "datum",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "domenove_jmeno",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "typ",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "cena",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 801.1987179487178,
+        "y": -117.7913055978851,
+        "width": 144,
+        "height": 140.02731100412424
+      }
+    },
+    {
+      "name": "Ochrana",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_ochrany",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "stav",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "sila",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "prezdivka",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "ochrana_od",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "ochrana_do",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1208.1323529411766,
+        "y": 90.15610137607882,
+        "width": 188.4565530614707,
+        "height": 157.41501823482298
+      }
+    },
+    {
+      "name": "Past",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_pasti",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "nazev",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "typ",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "sila",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "stav",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1143.4222342497178,
+        "y": -250.05674686339603,
+        "width": 135.66667175292991,
+        "height": 140
+      }
+    },
+    {
+      "name": "Poklad",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_pokladu",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "nazev",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "hodnota",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "stav",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 810.3111231386065,
+        "y": 250.1970373376626,
+        "width": 180.79267954267948,
+        "height": 137.15350848286096
+      }
+    },
+    {
+      "name": "Prekazka",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_prekazky",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "popis",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "stav",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "datum",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "typ",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1255.7249088886497,
+        "y": 394.45696165031245,
+        "width": 145.55555555555554,
+        "height": 122.97904070416894
+      }
+    },
+    {
+      "name": "Prisera",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_prisery",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "jmeno",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "typ",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "sila",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "stav",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1331.3111231386065,
+        "y": -250.6216764016989,
+        "width": 135.58688354492188,
+        "height": 140.34545707702637
+      }
+    },
+    {
+      "name": "Sluzba",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_sluzby",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "popis",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "sluzba_od",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "sluzba_do",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 1043.830669330669,
+        "y": 64.21226028068065,
+        "width": 122,
+        "height": 101.54998779296875
+      }
+    },
+    {
+      "name": "Vyprava",
+      "parent": null,
+      "attr": [
+        {
+          "name": "id_vypravy",
+          "primary": true,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "datum_registrace",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "stav",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "sila",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": null
+        },
+        {
+          "name": "prezdivka",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "ztraty_dusi",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "zisk_dusi",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "vyprava_od",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        },
+        {
+          "name": "vyprava_do",
+          "primary": false,
+          "unique": false,
+          "nullable": true,
+          "type": null
+        }
+      ],
+      "transform": {
+        "x": 323.2085137085139,
+        "y": 511.6743130484356,
+        "width": 209.7781982421875,
+        "height": 159.92276054986553
+      }
+    }
+  ],
+  "relations": [
+    [
+      {
+        "entity": "Dungeon",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "ma vlastnika",
+        "transform": {
+          "anchor": {
+            "x": 438.5880822533036,
+            "y": -154.22341353006266,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 438.58800595935827,
+              "y": -201.60108590726156
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Demon",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "vlastni",
+        "transform": {
+          "anchor": {
+            "x": 438.58792966541296,
+            "y": -248.97875828446047,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 438.58800595935827,
+              "y": -201.60108590726156
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Mistnost",
+        "identifying": true,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "je v dungeonu",
+        "transform": {
+          "anchor": {
+            "x": 425.0171007278698,
+            "y": 115.28794642857144,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 424.3835503639349,
+              "y": 75.50725157193506
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Dungeon",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "se sklada z mistnosti",
+        "transform": {
+          "anchor": {
+            "x": 423.75,
+            "y": 35.72655671529867,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 424.3835503639349,
+              "y": 75.50725157193506
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Objednavka",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "byla pro dungeon",
+        "transform": {
+          "anchor": {
+            "x": 801.1987179487178,
+            "y": -67.76399459376086,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 677.0043904510608,
+              "y": -67.20149459376086
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Dungeon",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "mel objednavku",
+        "transform": {
+          "anchor": {
+            "x": 552.8100629534039,
+            "y": -66.63899459376086,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 677.0043904510608,
+              "y": -67.20149459376086
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Objednavka",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "objednavka mistnosti",
+        "transform": {
+          "anchor": {
+            "x": 801.1987179487178,
+            "y": -15.763994593760856,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 790.1987179487178,
+              "y": 144.23600540623914
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Mistnost",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "je soucasti objednavky",
+        "transform": {
+          "anchor": {
+            "x": 531.1428571428571,
+            "y": 144.23600540623914,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 790.1987179487178,
+              "y": 144.23600540623914
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Ochrana",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "chrani",
+        "transform": {
+          "anchor": {
+            "x": 1208.1323529411766,
+            "y": 213.67103294888705,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 869.6376050420168,
+              "y": 213.66944603482455
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Mistnost",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "ma ochranu",
+        "transform": {
+          "anchor": {
+            "x": 531.1428571428571,
+            "y": 213.66785912076205,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 869.6376050420168,
+              "y": 213.66944603482455
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Past",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "je ochranou",
+        "transform": {
+          "anchor": {
+            "x": 1251.4352707938515,
+            "y": -110.05674686339603,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1251.4097784462688,
+              "y": -12.950322743658603
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Ochrana",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 1,
+        "xor": "8a7d7cb7c7dd27578a7d7cb7cd389e7f",
+        "name": "je past",
+        "transform": {
+          "anchor": {
+            "x": 1251.3842860986858,
+            "y": 90.15610137607882,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1251.4097784462688,
+              "y": -12.950322743658603
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Past",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "je soucasti objednavky",
+        "transform": {
+          "anchor": {
+            "x": 1143.4222342497178,
+            "y": -189.27681510658127,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 1132.424485800428,
+              "y": -142.02040485017102
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Objednavka",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "objednavka pasti",
+        "transform": {
+          "anchor": {
+            "x": 945.1987179487178,
+            "y": -94.7639945937608,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1132.4267373511386,
+              "y": -94.7639945937608
+            },
+            {
+              "x": 1132.424485800428,
+              "y": -142.02040485017102
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Poklad",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": "72af4e5399e8c1e972af4e53fa7d1c31",
+        "name": "byl ukraden",
+        "transform": {
+          "anchor": {
+            "x": 894.0765810015985,
+            "y": 387.35054582052356,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 894.0745668414422,
+              "y": 456.4251924085253
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Dobrodruh",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "ukradl",
+        "transform": {
+          "anchor": {
+            "x": 894.072552681286,
+            "y": 519.4998389965269,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 894.0745668414422,
+              "y": 456.4251924085253
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Poklad",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": "72af4e5399e8c1e972af4e53fa7d1c31",
+        "name": "lezi v mistnosti",
+        "transform": {
+          "anchor": {
+            "x": 810.3111231386065,
+            "y": 300.5105816956319,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 667.7269901407318,
+              "y": 300.50866774330115
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Mistnost",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "ma poklady",
+        "transform": {
+          "anchor": {
+            "x": 531.1428571428571,
+            "y": 300.5067537909704,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 667.7269901407318,
+              "y": 300.50866774330115
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Poklad",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "je soucasti objednavky",
+        "transform": {
+          "anchor": {
+            "x": 901.644585959719,
+            "y": 250.1970373376626,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 901.144585959719,
+              "y": 136.21652137195088
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Objednavka",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "objednavka pokladu",
+        "transform": {
+          "anchor": {
+            "x": 900.644585959719,
+            "y": 22.236005406239144,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 901.144585959719,
+              "y": 136.21652137195088
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Prekazka",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "vyskytuje se v celem dungeonu",
+        "transform": {
+          "anchor": {
+            "x": 1255.7249088886497,
+            "y": 449.43600235448133,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 904.2674859210267,
+              "y": 449.43600235448133
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Dungeon",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "ma prekazku ci problem",
+        "transform": {
+          "anchor": {
+            "x": 552.8100629534039,
+            "y": 24.43600235448133,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 563.8100629534039,
+              "y": 449.43600235448133
+            },
+            {
+              "x": 904.2674859210267,
+              "y": 449.43600235448133
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Prekazka",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "vyskytuje se v mistnosti",
+        "transform": {
+          "anchor": {
+            "x": 1255.7249088886497,
+            "y": 471.43600235448133,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 881.8445829079612,
+              "y": 471.43600235448133
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Mistnost",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "ma prekazku ci problem",
+        "transform": {
+          "anchor": {
+            "x": 531.1428571428571,
+            "y": 340.8599198032707,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 542.1428571428571,
+              "y": 471.43600235448133
+            },
+            {
+              "x": 881.8445829079612,
+              "y": 471.43600235448133
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Prisera",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "je nebo byla v ochrane",
+        "transform": {
+          "anchor": {
+            "x": 1466.8980066835284,
+            "y": -125.2212595510259,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1477.8980066835284,
+              "y": 170.86420578644916
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Ochrana",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 1,
+        "xor": "8a7d7cb7c7dd27578a7d7cb7cd389e7f",
+        "name": "je prisera",
+        "transform": {
+          "anchor": {
+            "x": 1396.5889060026473,
+            "y": 170.86420578644916,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1477.8980066835284,
+              "y": 170.86420578644916
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Prisera",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "je soucasti objednavky",
+        "transform": {
+          "anchor": {
+            "x": 1350.6531329682657,
+            "y": -110.27621932467252,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1350.6531329682657,
+              "y": -50.7639945937608
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Objednavka",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "objednavka prisery",
+        "transform": {
+          "anchor": {
+            "x": 945.1987179487178,
+            "y": -50.7639945937608,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1350.6531329682657,
+              "y": -50.7639945937608
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Prisera",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "ma bossa",
+        "transform": {
+          "anchor": {
+            "x": 1466.8980066835284,
+            "y": -197.55674686339603,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1516.872365772002,
+              "y": -197.55674686339603
+            },
+            {
+              "x": 1516.872365772002,
+              "y": -299.4128675027731
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Prisera",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "je bossem",
+        "transform": {
+          "anchor": {
+            "x": 1399.1045649110602,
+            "y": -250.62167640169844,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1399.1045649110602,
+              "y": -299.4128675027731
+            },
+            {
+              "x": 1516.872365772002,
+              "y": -299.4128675027731
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Prisera",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "zodpoveda za odsraneni",
+        "transform": {
+          "anchor": {
+            "x": 1466.8980066835284,
+            "y": -175.94348177324787,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1544.8753551904879,
+              "y": -175.94348177324787
+            },
+            {
+              "x": 1544.8753551904879,
+              "y": 438.9014060947568
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Prekazka",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "prekazkou se zabyva",
+        "transform": {
+          "anchor": {
+            "x": 1401.2804644442053,
+            "y": 438.9014060947568,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1544.8753551904879,
+              "y": 438.9014060947568
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Sluzba",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "je soucasti objednavky",
+        "transform": {
+          "anchor": {
+            "x": 1113.413765288759,
+            "y": 64.21226028068065,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1113.413765288759,
+              "y": -9.177353251839975
+            }
+          ],
+          "manual": true
+        }
+      },
+      {
+        "entity": "Objednavka",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": "objednavka sluzby",
+        "transform": {
+          "anchor": {
+            "x": 945.1987179487178,
+            "y": -9.177353251839975,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 1113.413765288759,
+              "y": -9.177353251839975
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Sluzba",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "resi prekazku",
+        "transform": {
+          "anchor": {
+            "x": 1065.699040776524,
+            "y": 165.7622480736494,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 1065.699040776524,
+              "y": 383.45696165031245
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Prekazka",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "je resena sluzbou",
+        "transform": {
+          "anchor": {
+            "x": 1315.699040776524,
+            "y": 394.45696165031245,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 1065.699040776524,
+              "y": 383.45696165031245
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Vyprava",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "byla provedena dobrodruzniky",
+        "transform": {
+          "anchor": {
+            "x": 532.9867119507014,
+            "y": 574.215074694503,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 689.7206287026236,
+              "y": 574.2464010981903
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Dobrodruh",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "byl ve vyprave",
+        "transform": {
+          "anchor": {
+            "x": 846.4545454545457,
+            "y": 574.2777275018777,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 689.7206287026236,
+              "y": 574.2464010981903
+            }
+          ],
+          "manual": true
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Vyprava",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "byla v mistnostech",
+        "transform": {
+          "anchor": {
+            "x": 431.2653784585098,
+            "y": 511.6743130484356,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 430.92797848035195,
+              "y": 465.4337830925198
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Mistnost",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 0,
+        "xor": null,
+        "name": "mela navstevy",
+        "transform": {
+          "anchor": {
+            "x": 430.59057850219415,
+            "y": 419.19325313660397,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 430.92797848035195,
+              "y": 465.4337830925198
+            }
+          ],
+          "manual": false
+        }
+      }
+    ]
+  ],
+  "notes": [
+    {
+      "text": "IO1: hodnota atributu \nlvl_dungeonu\nse urcuje dle \ndemonske verzi \nstupnice mr.heroicable, \naproximovane na \nhodnoty od 1 do 20.",
+      "transform": {
+        "x": 506.7555726693138,
+        "y": -224.67896806836552,
+        "width": 145.56666564941406,
+        "height": 108.11497042284685
+      }
+    },
+    {
+      "text": "hell_id - kazdy demon\nma svuj proklety ID, kterym\nse lisi od ostatnich demonu.\n\nvrstva_pekla - analogie \nstatu ve risi zivych.",
+      "transform": {
+        "x": 476.75856967231084,
+        "y": -426.2473319961046,
+        "width": 170.578125,
+        "height": 100
+      }
+    },
+    {
+      "text": "sila - prumerna sila kazde mistnosti.\nhodnota - prumerna hodnota\npokladu kazde mistnosti.\npomer_sila_k_bohatstvi - zlomek,\npomer mezi prumernymi hodnotami\nsily a hodnoty dungeonu.",
+      "transform": {
+        "x": 192.76125466089098,
+        "y": -25.41286750277311,
+        "width": 218.0833282470703,
+        "height": 118
+      }
+    },
+    {
+      "text": "IO2: Prisera nemuze byt\nbossem sama pro sebe",
+      "transform": {
+        "x": 1445.4728553865968,
+        "y": -263.11721211598456,
+        "width": 150,
+        "height": 48
+      }
+    },
+    {
+      "text": "IO3: Mistnost nemuze mit \nza ochranu past a\nzaroven priseru",
+      "transform": {
+        "x": 1277.6157125294537,
+        "y": 191.5970735983011,
+        "width": 161.671875,
+        "height": 71.63893180793804
+      }
+    },
+    {
+      "text": "IO4: rozmezi hodnot polozek \njsou stanovene podle taxonomickeho \nsystemu D&amp;D 5e, \nviz. kniha hrace (cca 300 stranek)",
+      "transform": {
+        "x": 954.0778337415743,
+        "y": 639.5970735983008,
+        "width": 223.71875,
+        "height": 65.4545454545455
+      }
+    },
+    {
+      "text": "hodnota pokladu\nse pocita v dusich",
+      "transform": {
+        "x": 868.2612546608909,
+        "y": 331.19016800389545,
+        "width": 111.125,
+        "height": 45
+      }
+    },
+    {
+      "text": "sila se odvozuje\nz ratingu\nnebezpecnosti\ndle D&amp;D 5e",
+      "transform": {
+        "x": 1217.761254660891,
+        "y": -192.30983199610455,
+        "width": 108,
+        "height": 64
+      }
+    },
+    {
+      "text": "sila se odvozue\nz ratingu\nslozitosti boje\ndle D&amp;D 5e",
+      "transform": {
+        "x": 1160.761254660891,
+        "y": 232.85683212743055,
+        "width": 103.890625,
+        "height": 64
+      }
+    },
+    {
+      "text": "sila vypravy se odvozue\nz poctu a urovni \ndobrodruhu dle\nD&amp;D 5e\nPokud umite rusky,\ntak doporucuji\nweb dungeon.su",
+      "transform": {
+        "x": 481.7612546608909,
+        "y": 623.3568321274306,
+        "width": 145.09375,
+        "height": 104.5
+      }
+    }
+  ]
+}

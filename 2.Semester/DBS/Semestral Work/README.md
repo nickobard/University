@@ -1,4 +1,4 @@
-# Soul Farm
+# Soul Farm Database
 
 ## Description
 
@@ -62,6 +62,9 @@ List of entities:
 (for the diagram above it is recommended to use light theme, or skip it and go to the next diagram)
 
 ![diagram-2.png](diagram-2.png)
+
+[data.json](data.json) - visualization in json data format (usable only on intranet dbs portal).
+[model.json](model.json) - visualization in json model format (usable only on intranet dbs portal).
 
 ## Loops Discussion
 
