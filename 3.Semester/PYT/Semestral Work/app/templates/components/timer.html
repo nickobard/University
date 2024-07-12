@@ -1,0 +1,229 @@
+<div class="container-fluid shadow-lg">
+    <div id="app"></div>
+</div>
+
+<script type="module">
+    import {app, h, text} from "https://unpkg.com/hyperapp"
+    import {every} from "https://unpkg.com/@hyperapp/time"
+
+
+    {% if running is none %}
+        const initState = {datetime_start: null, count: 0, running: false, title: "(no name)", task_id: null}
+    {%  else %}
+        const initState = {
+            datetime_start: "{{ running.datetime_start }}",
+            count: Math.round((Date.now() - new Date("{{ running.datetime_start }}")) / 1000),
+            running: true,
+            title: {% if running.title is none %} "(no name)" {% else %} "{{ running.title }}" {% endif %},
+            task_id: {{running.id}}
+        }
+    {% endif %}
+
+
+    const pad = (n) => (n < 10 ? "0" + n : n)
+
+    const humanizeTime = (t) => {
+        const hours = Math.trunc(t / 3600)
+        const minutes = Math.trunc((t - hours * 3600) / 60)
+        const seconds = Math.trunc(t - hours * 3600 - minutes * 60)
+        return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+    }
+
+    const checkRunning = (dispatch, options) => {
+        const ws = new WebSocket("ws://localhost:8000/api/ws/track");
+
+        const handler = (ev) => dispatch(options.action, ev.data)
+        const beforeUnloadHandler = () => ws.close()
+
+        ws.addEventListener('message', handler)
+        addEventListener('beforeunload', beforeUnloadHandler)
+        return () => {
+            removeEventListener('beforeunload', beforeUnloadHandler)
+            ws.removeEventListener('message', handler)
+            ws.close()
+        }
+    }
+
+    const Tick = (state) => {
+        const date_now = Date.now()
+        const date_start = new Date(state.datetime_start)
+        const updatedCount = Math.round((date_now - date_start) / 1000)
+        return {...state, count: updatedCount}
+    }
+
+    const StopTimerEffector = (state) => {
+        const currentDatetime = Date.now()
+        const offset = new Date().getTimezoneOffset() * 60 * 1000
+        const withOffset = currentDatetime - offset
+
+        return [
+            {...state},
+            dispatch => {
+                fetch("/api/entries/running/stop", {
+                    method: 'PUT',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        datetime_end: new Date(withOffset)
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => dispatch(StopTimer, data))
+                    .catch((error) => {
+                        console.error("Error with updating task name: ", error)
+                        return {}
+                    })
+            }
+        ]
+    }
+
+    const StopTimer = (state, data) => {
+        showInputSuccess(`Successfully created time entry with title: ${data.title}, date start: ${data.datetime_start}, and date end: ${data.datetime_end}. Refresh the page to see it in the table!`)
+        return {...state, datetime_start: null, count: 0, running: false, title: null}
+    }
+
+    const InputTaskNameEffector = (state, event) => {
+        event.preventDefault()
+        const data = new FormData(event.target)
+        let input = [...data.entries()][0][1].trim()
+        if (input == null || input === "")
+            input = "(no name)"
+        document.getElementById("task-input").reset()
+        const currentDatetime = Date.now()
+        const offset = new Date().getTimezoneOffset() * 60 * 1000
+        const withOffset = currentDatetime - offset
+        return [{...state},
+            dispatch => {
+                fetch("/api/entries/running", {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({title: input, datetime_start: new Date(withOffset)})
+                })
+                    .then(response => response.json())
+                    .then(data => dispatch(InputTaskName, data))
+                    .catch((error) => {
+                        console.error("Error with updating task name: ", error)
+                        return {}
+                    })
+            }]
+    }
+
+    const UpdateTaskNameEffector = (state, event) => {
+        event.preventDefault()
+        const data = new FormData(event.target)
+        let input = [...data.entries()][0][1].trim()
+        if (input == null || input === "")
+            input = "(no name)"
+        document.getElementById("task-input").reset()
+        return [{...state},
+            dispatch => {
+                fetch(`/api/entries/${state.task_id}`, {
+                    method: 'PUT',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({title: input, id: state.task_id})
+                })
+                    .then(response => response.json())
+                    .then(data => dispatch(UpdateTaskName, data))
+                    .catch((error) => {
+                        console.error("Error with updating task name: ", error)
+                        return {}
+                    })
+            }]
+    }
+
+    const UpdateTaskName = (state, data) => {
+        return {
+            ...state,
+            title: data.title,
+        }
+    }
+
+    const InputTaskName = (state, data) => {
+        return {
+            ...state,
+            datetime_start: data.datetime_start,
+            count: 0,
+            running: true,
+            title: data.title,
+            task_id: data.id
+        }
+    }
+
+    app({
+        init: {
+            ...initState
+        },
+        view: (state) =>
+            h("div", {class: "d-flex flex-row pt-1"}, [
+                h("div", {class: "d-flex col-lg-9 col-md-6 gap-5"}, [
+                    h("div", {class: "container"}, [
+                        h("form", {
+                            id: "task-input",
+                            onsubmit: state.running ? UpdateTaskNameEffector : InputTaskNameEffector
+                        }, [
+                            h("div", {class: "form-floating"}, [
+                                h("input", {
+                                    type: "text",
+                                    id: "task-name",
+                                    class: "form-control",
+                                    placeholder: "doesn't matter",
+                                    name: "task-name"
+                                }),
+                                state.running
+                                    ? h("label", {
+                                        for: "task-name",
+                                        class: "form-label"
+                                    }, text(`${state.title == null || `${state.title}`.trim() === "" ? "(no name)" : state.title}`))
+                                    : h("label", {
+                                        for: "task-name",
+                                        class: "form-label"
+                                    }, text("Enter your task name"))
+                            ])
+                        ])
+                    ])
+                ]),
+                h("div", {class: "d-flex col-lg-3 col-md-6 justify-content-center fs-2 gap-5 m-2"}, [
+                    h("span", {}, text(`${humanizeTime(state.count)}`)),
+                    state.running
+                        ? h("button", {class: "btn btn-danger", onclick: [StopTimerEffector, state]}, text("Stop"))
+                        : h("button", {class: "btn btn-dark", form: "task-input"}, text("Start"))
+
+
+                ])]),
+        subscriptions:
+            state => [
+                state.running && every(500, Tick),
+                [checkRunning, {
+                    action: (state, data) => {
+                        const json_obj = JSON.parse(data)
+                        if (Object.keys(json_obj).length === 0) {
+                            return {
+                                ...state,
+                                datetime_start: null,
+                                count: 0,
+                                running: false,
+                                title: null,
+                                task_id: null
+                            }
+                        } else if (state.running === false) {
+                            const datetimeStart = new Date(json_obj.datetime_start)
+                            const initDatetimeStart = datetimeStart.toString()
+                            const initialCount = Math.round((Date.now() - datetimeStart) / 1000)
+                            return {
+                                ...state,
+                                datetime_start: initDatetimeStart,
+                                count: initialCount,
+                                running: true,
+                                title: json_obj.title,
+                                task_id: json_obj.id
+                            }
+                        }
+                        return {...state}
+                    }
+                }]
+            ],
+        node:
+            document.getElementById("app"),
+    })
+
+
+</script>

@@ -1,0 +1,268 @@
+<div class="container-fluid px-5 pt-5">
+    <div class="container-fluid bg-light p-3">
+
+        <div class="row justify-content-center p-2">
+            <form action="/track" method="GET" class="d-flex flex-row" id="filter-form">
+
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <label for="dt-from">Date from</label>
+                    </div>
+                    <input class="form-control" type="datetime-local" name="datetime_from" id="dt-from">
+
+                    <div class="input-group-text">
+                        <label for="dt-to">To</label>
+                    </div>
+                    <input class="form-control" type="datetime-local" name="datetime_to" id="dt-to">
+
+
+                    <div class="input-group-text">
+                        <label for="order-column">Order by</label>
+                    </div>
+
+                    <select name="column" id="order-column" class="form-select">
+                        <option value="id" selected>Last added</option>
+                        <option value="title">Title</option>
+                        <option value="datetime_start">Date start</option>
+                        <option value="datetime_end">Date end</option>
+                        <option value="duration">Duration</option>
+                    </select>
+
+                    <div class="input-group-text">
+                        <label class="form-check-label" for="order-type">Ascending</label>
+                    </div>
+
+                    <div class="input-group-text ">
+                        <input class="form-check-input" type="checkbox" id="order-type" name="order"
+                               value="ascending">
+
+                    </div>
+                    <button class="btn btn-dark " style="min-width: 5vw">Filter</button>
+
+                </div>
+            </form>
+        </div>
+
+
+        <div class="row justify-content-center p-2">
+            <form class="d-flex flex-row" id="create-form">
+                <div class="d-flex col-12">
+
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <label for="dt-start">Date start</label>
+                        </div>
+                        <input class="form-control" type="datetime-local" name="datetime_start" id="dt-start" required>
+
+                        <div class="input-group-text">
+                            <label for="dt-end">Date end</label>
+                        </div>
+                        <input class="form-control" type="datetime-local" name="datetime_end" id="dt-end" required>
+
+                        <div class="input-group-text">
+                            <label for="title-input">Title</label>
+                        </div>
+                        <input class="form-control" type="text" name="title" id="title-input"
+                               placeholder="Write here your task name...">
+
+                        <button class="btn btn-dark" style="min-width: 5vw">Create</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="row bg-danger-subtle rounded-2 m-2" id="input-error" hidden="hidden">
+            <div class="d-flex p-3 col-11">
+                <span class="p text-danger" id="input-error-message"> </span>
+            </div>
+            <div class="d-flex col-1 justify-content-end pt-2">
+                <button class="btn-close " onclick="dismissInputError()"></button>
+            </div>
+        </div>
+
+        <div class="row bg-success-subtle rounded-2 m-2" id="input-success" hidden="hidden">
+            <div class="d-flex p-3 col-11">
+                <span class="p text-success" id="input-success-message"></span>
+            </div>
+            <div class="d-flex col-1 justify-content-end pt-2">
+                <button class="btn-close " onclick="dismissInputSuccess()"></button>
+            </div>
+        </div>
+
+        <div class="row" style="min-width: 5vw">
+            <div class="d-flex justify-content-between flex-row">
+
+                <div class="d-flex">
+                    <button class="btn btn-danger m-2" style="min-width: 5vw" onclick="deleteCheckedEntries()">Delete</button>
+                </div>
+
+                <div class="d-flex justify-content-end ">
+                    <button class="btn btn-info text-white m-2" style="min-width: 5vw" onclick="reloadPage()">Refresh</button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="table-responsive shadow bg-light overflow-y-scroll" style="max-height: 80vh">
+        <table class="table table-hover bg-light">
+            <thead>
+            <tr>
+                <th></th>
+                <th class="col-4">Title</th>
+                <th>Date start</th>
+                <th>Date end</th>
+                <th>Duration</th>
+            </tr>
+            </thead>
+            <tbody class="table-group-divider" id="entries-data">
+            {% for entry in entries %}
+                <tr id="entry-{{ entry.id }}">
+                    <td>
+                        <label for="item-{{ entry.id }}"></label>
+                        <input class="form-check-input " type="checkbox" id="item-{{ entry.id }}" name="item-id"
+                               value="{{ entry.id }}">
+                    </td>
+                    <td>
+                        {{ "(no name)" if entry.title is none else entry.title }}
+                    </td>
+                    <td>{{ entry.datetime_start }}</td>
+                    <td>{{ entry.datetime_end }}</td>
+                    <td>{{ entry.duration }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<script>
+    function reloadPage() {
+        document.location.reload()
+    }
+
+    const filter_form = document.getElementById("filter-form")
+    filter_form.addEventListener('submit', (e) => {
+        const datetimeFromNode = filter_form.querySelector('#dt-from')
+        const datetimeToNode = filter_form.querySelector('#dt-to')
+
+        const datetimeFrom = datetimeFromNode.value
+        const datetimeTo = datetimeToNode.value
+        if (datetimeFrom === "" || datetimeTo === "") {
+            return
+        }
+        if (new Date(datetimeFrom) > new Date(datetimeTo)) {
+            e.preventDefault()
+            showInputError("Date from is before date to.")
+            datetimeFromNode.classList.add("is-invalid")
+            datetimeToNode.classList.add("is-invalid")
+        }
+    })
+
+    const create_form = document.getElementById("create-form")
+    create_form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const datetimeStartNode = create_form.querySelector('#dt-start')
+        const datetimeEndNode = create_form.querySelector('#dt-end')
+
+
+        const datetimeStart = datetimeStartNode.value
+        const datetimeEnd = datetimeEndNode.value
+        if (new Date(datetimeStart) > new Date(datetimeEnd)) {
+            showInputError("Date end is before date start.")
+            datetimeStartNode.classList.add("is-invalid")
+            datetimeEndNode.classList.add("is-invalid")
+            return
+        }
+        let title = create_form.querySelector('#title-input').value
+        if (title == null || title.trim() === "") {
+            title = "(no name)"
+        } else {
+            title = title.trim()
+        }
+
+        fetch("/api/entries", {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({title: title, datetime_start: datetimeStart, datetime_end: datetimeEnd})
+        })
+            .then(response => response.json())
+            .then(data => {
+                showInputSuccess(`Successfully created time entry with title: ${data.title}, date start: ${data.datetime_start}, and date end: ${data.datetime_end}. Refresh the page to see it in the table!`)
+            })
+            .catch(error => showInputError(error))
+    })
+
+
+    function showInputError(message) {
+        document.getElementById('input-error-message').innerText = message
+        document.getElementById("input-error").removeAttribute('hidden')
+    }
+
+    function showInputSuccess(message) {
+        document.getElementById('input-success-message').innerText = message
+        document.getElementById("input-success").removeAttribute('hidden')
+        setTimeout(dismissInputSuccess, 30000)
+    }
+
+    function dismissInputSuccess() {
+        document.getElementById("input-success").setAttribute('hidden', 'hidden')
+    }
+
+    function dismissInputError() {
+        document.getElementById("input-error").setAttribute('hidden', 'hidden')
+
+        dismissFilterInputError()
+        dismissCreateInputError()
+
+    }
+
+    function dismissFilterInputError() {
+        filter_form.querySelector('#dt-from').classList.remove('is-invalid')
+        filter_form.querySelector('#dt-to').classList.remove('is-invalid')
+    }
+
+    function dismissCreateInputError() {
+        create_form.querySelector('#dt-start').classList.remove('is-invalid')
+        create_form.querySelector('#dt-end').classList.remove('is-invalid')
+    }
+
+    function deleteCheckedEntries() {
+        let toDelete = Array()
+        document.querySelector('#entries-data')
+            .querySelectorAll("input")
+            .forEach((node) => {
+                if (node.checked)
+                    toDelete.push(node.value)
+            })
+        fetch("/api/entries", {
+            method: "DELETE",
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(toDelete)
+        })
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(deleted => {
+                    let node = document.querySelector("#entries-data").querySelector(`#entry-${CSS.escape(deleted.id)}`);
+                    node.remove()
+                })
+            })
+            .then(() => showInputSuccess("Successfully deleted existing entries."))
+            .catch(error => {
+                showInputError(error)
+            })
+    }
+
+
+</script>

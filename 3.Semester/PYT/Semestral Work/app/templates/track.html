@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Time Track App {% endblock %}
+
+{% block header %}
+    {{ super() }}
+    {% include "components/timer.html" %}
+
+{% endblock header %}
+
+{% block content %}
+
+    {% include "components/list.html" %}
+
+{% endblock content %}
