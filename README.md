@@ -2,6 +2,21 @@
 
 Hello, I'm Nikita, this is my repository with all of my [university](https://fit.cvut.cz/en) subjects, projects, homeworks, semestral works and other activities.
 
+
+## Highlights
+
+List of the most interesting, big and relevant projects and courses.
+
+- Machine Learning - Semestral Works during ML1 and ML2 courses.
+- Practical Statistics - Team Semestral Works
+- Data Visualization - explorative analysis, visualization of data, visualization in ML.
+- Wizview - Team SW Project - backend in Python (FastAPI), frontend in Angular
+- Time Tracker App - full-stack application, backend in Python, frontend in Jinja and Javascript.
+- Dungeon Keeper database - PostgreSQL database.
+- Pacman Game - C/C++ with using SDL graphics library.
+
+## Courses
+
 Each link leads to course annotation and syllabus, and source code (**bold font with '*'** indicates available source code).
 
 ### 1. Semester
