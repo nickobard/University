@@ -1,4 +1,4 @@
-[hw02_for_dummies.md](guide%2Fhw02_for_dummies_ru.md) - my guide for classmates to help them solve this task.
+[hw02_for_dummies.md](guide/hw02_for_dummies.md) - my guide for classmates to help them solve this task.
 
 ## Bestsellers
 
