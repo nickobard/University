@@ -25,3 +25,22 @@ You can find detailed instructions in assigment `analysis/homework04.py`.
 You can use only packages `numpy` and `pandas`, do not use packages such as `scipy`, `sklearn`, etc.
 
 Try to use pandas methods and method chains as much as possible.
+
+### Code Structure:
+
+```text
+.
+├── analysis
+│   └── homework04.py
+├── data
+│   ├── test.csv
+│   └── train.csv
+├── environment.yml
+├── README.md
+└── tests
+    ├── __init__.py
+    └── test_analysis.py
+
+3 directories, 7 files
+
+```

@@ -1,3 +1,17 @@
+### Code Structure:
+
+
+```text
+.
+├── README.md
+├── src
+│   ├── __init__.py
+│   ├── node.py
+│   └── tree_iterator.py
+├── test_trees.py
+└── trees.py
+```
+
 
 ## Trees
 
