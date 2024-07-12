@@ -1,3 +1,57 @@
+
+### Code Structure:
+
+```text
+.
+├── bin
+│   ├── checksum.php
+│   ├── composer.phar
+│   └── evaluate.php
+├── ci
+│   └── docker_install.sh
+├── composer.json
+├── composer.lock
+├── docker
+│   ├── nginx
+│   │   └── default.conf
+│   ├── php7.4
+│   │   ├── Dockerfile
+│   │   ├── php.ini
+│   │   └── xdebug.ini
+│   ├── php8.1
+│   │   ├── Dockerfile
+│   │   ├── php.ini
+│   │   └── xdebug.ini
+│   └── postgres
+│       └── Dockerfile
+├── docker-compose.yaml
+├── main.php
+├── README.md
+└── src
+    ├── Events
+    │   └── Event.php
+    ├── ParkingMachines
+    │   └── ParkingMachineCommand.php
+    ├── Tests
+    │   ├── Events
+    │   │   ├── AbstractEventsTest.php
+    │   │   ├── CreateDbTableTest.php
+    │   │   ├── FindByIdTest.php
+    │   │   ├── FindByVenueAndDateTest.php
+    │   │   └── SaveTest.php
+    │   ├── ParkingMachines
+    │   │   ├── AbstractParkingMachineTest.php
+    │   │   ├── ParkingMachineInputTest.php
+    │   │   └── ParkingMachineOutputTest.php
+    │   └── Triangle
+    │       ├── TriangleBasicsTest.php
+    │       ├── TriangleSimilarTest.php
+    │       ├── TriangleSpecialTest.php
+    │       └── TriangleTrait.php
+    └── Triangle
+        └── Triangle.php
+```
+
 # Final Task
 
 The final task consists of three independent assignments. Each assignment has several parts for which you can earn

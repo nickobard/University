@@ -43,16 +43,6 @@ hw02-Bestsellers
 
 ## Bestsellers
 
-I have traveled almost the entire world and can confidently say that there is no nation that enjoys Christmas as much as these Whos. From my encounters with the Whos, I have learned that it's not just the anticipation of presents, fun in the snow, and time spent with family and friends. What the Whos feel for Christmas comes from deep within their hearts, and I would dare to call it an instinctive desire or primal need for a happy and peaceful Christmas.
-
-At least, that's the case for most of them. Just like any other group, there are exceptions among the Whos. And I don't mean the Grinch. I'm talking about someone even worse. What could be worse than someone who, out of their own fear and sense of injustice, wants to steal Christmas from these people, you ask? Well, it is someone who exploits these basest human instincts, strengthens fear and uncertainty, and offers simple solutions for everything. And all with one goal - to profit as much as possible. Yes, dear readers, you guessed correctly. It is none other than the esteemed Mayor!
-
-For such a naive nation as the Whos, it is not surprising that the Mayor has been in power for several consecutive terms. Each time winning with more than 99% of the votes. Those of us who have been around for a while are also not surprised that in reality, caring for the village is only a secondary concern for the Mayor. The Mayor owns the largest (and also the only, to be honest) toy store in Whoville. A colossal conflict of interest, one might say! But it doesn't bother the locals.
-
-According to the saying "appetite comes with eating," the Mayor is never satisfied. Last year, he launched an operation called Bestselling Products. This massive digitization of all purchases and analysis of product sales led to a tenfold increase in the Mayor's profits. This year, he plans to continue the digitization and take it to an even higher level. Ladies and gentlemen, welcome Bestselling Products II, an even more monstrous operation aimed at thoroughly emptying the Whos' wallets. The gossips claim that this operation will not only drain their savings but might even steal a small piece of each Who's soul.
-
-And how do you fit into all of this? After all, you are the good guys, and you wouldn't dirty your hands with such wickedness. The truth is, no one other than the town council and the Mayor's toy store will give you a contract. Moreover, you proved yourself last year. Therefore, this year, the implementation of Bestselling Products falls on you.
-
 ### Program Interface
 
 Your task is to implement a template class `Bestsellers` parameterized by the type `Product`, which serves as an identifier for individual products. It is promised that the `Product` type has a copy constructor (and assignment operator), destructor, comparison operators, and `std::hash` implemented. The `Bestsellers` class must implement the following public methods:
@@ -73,8 +63,14 @@ Just a bonus: `size_t first_same(size_t r) const` and `size_t last_same(size_t r
 
 If the arguments of the call are invalid (i.e., rank out of bounds or unknown product in the `rank` method), throw a `std::out_of_range` exception.
 
-### Scoring Conditions
+## Point Conditions
 
-- For 1 point, you need to functionally implement the above-described interface, but the implementation does not have to be very efficient.
+- To earn 1 point, you need to functionally implement the above-described interface, but the implementation does not have to be very efficient.
 
-- For 3.5 points, the implementation must be efficient if the number of sold units is random, but the complexity o
+- To earn 3.5 points, the implementation must be efficient if the number of sold items is random, but the complexity of the `sold(from, to)` method may depend on `to - from`.
+
+- To earn 7 points, the implementation must be efficient, but the complexity of the `sold(from, to)` method can still depend on `to - from`.
+
+- To earn 10 points, the `sold(from, to)` method must be efficient even with a large `to - from`.
+
+- Bonus: To earn 12 points, the `first_same` and `last_same` methods must be correctly and efficiently implemented.
