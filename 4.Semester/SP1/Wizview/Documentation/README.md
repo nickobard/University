@@ -9,8 +9,8 @@ DSR is a service for reviewing data managment plans created using [Data Stewards
 
 ## Links
 
-- [Application Architecture.md](Application%20Architecture.md)
-- [Business Process Analysis.md](Business%20Process%20Analysis.md)
-- [Relational Database Model.md](Relational%20Database%20Model.md)
-- [Requirements Analysis.md](Requirements%20Analysis.md)
-- [UML Diagram.md](UML%20Diagram.md)
+- [Application Architecture](Application%20Architecture.md)
+- [Business Process Analysis](Business%20Process%20Analysis.md)
+- [Relational Database Model](Relational%20Database%20Model.md)
+- [Requirements Analysis](Requirements%20Analysis.md)
+- [UML Diagram](UML%20Diagram.md)
