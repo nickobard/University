@@ -1,5 +1,9 @@
 # KOT - Programing in Kotlin
 
+- [hw01 - heapsort](src/main/kotlin/fit/cvut/bikot/homeworks/hw01)
+- [hw02 - elements](src/main/kotlin/fit/cvut/bikot/homeworks/hw02)
+- [hw03 - postfix_visitor](src/main/kotlin/fit/cvut/bikot/homeworks/hw03)
+
 ## SYNOPSIS
 Kotlin is a modern, statically-styled object-functional language that exploits the extensive Java language ecosystem while delivering a number of advanced language constructions. The language is fully Java compliant and allows for mixed projects that preserve existing parts written in Java, and continue with the development of a modern, object-functional way with minimum of boiler-plate code. Last but not least, Kotlin is suitable for designing of DSLs (Domain-Specific Languages).
 
