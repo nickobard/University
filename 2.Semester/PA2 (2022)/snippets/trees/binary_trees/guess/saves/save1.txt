@@ -1,0 +1,23 @@
+Leta?
+Laje?
+Mnouka?
+je reptilie?
+ryba
+ _TREE_LEAF_ 
+ _TREE_LEAF_ 
+zelva
+ _TREE_LEAF_ 
+ _TREE_LEAF_ 
+kocka
+ _TREE_LEAF_ 
+ _TREE_LEAF_ 
+pes
+ _TREE_LEAF_ 
+ _TREE_LEAF_ 
+zije v antarktice?
+ptak
+ _TREE_LEAF_ 
+ _TREE_LEAF_ 
+penqiun
+ _TREE_LEAF_ 
+ _TREE_LEAF_ 
