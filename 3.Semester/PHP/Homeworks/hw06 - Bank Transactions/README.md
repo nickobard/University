@@ -1,3 +1,49 @@
+### Code Structure:
+
+```text
+.
+├── composer.json
+├── composer.lock
+├── data
+│   ├── tr1.txt
+│   └── tr2.txt
+├── docker
+│   ├── nginx
+│   │   └── default.conf
+│   ├── php8.1
+│   │   ├── Dockerfile
+│   │   ├── php.ini
+│   │   └── xdebug.ini
+│   └── postgres
+│       └── Dockerfile
+├── docker-compose.yaml
+├── README.md
+├── run.php
+├── src
+│   ├── Db.php
+│   └── Model
+│       ├── AbstractModel.php
+│       ├── Account.php
+│       ├── IdentifiableTrait.php
+│       ├── ModelInterface.php
+│       └── Transaction.php
+├── test
+│   ├── 100100_0300_2.txt
+│   ├── 100100_0710_2.txt
+│   ├── 101010_2010_2.txt
+│   ├── 111300_0710_1.txt
+│   ├── 111300_0710_2.txt
+│   ├── 111323_0710_1.txt
+│   ├── 111323_0710_2.txt
+│   ├── 330330_0800_1.txt
+│   ├── 330330_0800_2.txt
+│   ├── 330331_0800_1.txt
+│   ├── 330331_0800_2.txt
+│   └── 330335_0800_2.txt
+└── test.sh
+
+```
+
 # Task 6: Bank Transactions
 
 The goal is to create a program that imports bank transactions from files into a database and outputs summaries for individual bank accounts. Database storage ensures data persistence between application runs.

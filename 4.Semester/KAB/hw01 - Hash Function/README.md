@@ -1,3 +1,24 @@
+### Code Structure:
+
+```text
+.
+├── graph.ipynb
+├── graph.nb
+├── python_data.txt
+├── README.md
+├── solution
+│   ├── CMakeLists.txt
+│   ├── main.cpp
+│   └── src
+│       ├── Bytes.cpp
+│       ├── Bytes.hpp
+│       ├── Hasher.cpp
+│       └── Hasher.hpp
+└── wolfram_data.txt
+
+2 directories, 11 files
+```
+
 # Hash Function
 
 Your task is to implement a function (or a set of functions, not a complete program) that will find any message whose hash (SHA-512) starts with a sequence of zero bits from the left.

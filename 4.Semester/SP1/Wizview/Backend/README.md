@@ -111,3 +111,122 @@ good-names=i, j, df, db
 
 ***
 
+### Code Structure
+
+    excluding: "*pycache*|__init__.py"
+
+```text
+.
+├── app
+│   ├── app
+│   │   ├── api
+│   │   │   ├── comments.py
+│   │   │   ├── discussions.py
+│   │   │   ├── documents.py
+│   │   │   └── utils.py
+│   │   ├── core
+│   │   │   ├── config.py
+│   │   │   └── utils.py
+│   │   ├── crud
+│   │   │   ├── crud_base.py
+│   │   │   ├── crud_comment.py
+│   │   │   ├── crud_discusion.py
+│   │   │   └── crud_document.py
+│   │   ├── db
+│   │   │   ├── base_class.py
+│   │   │   ├── init_db.py
+│   │   │   └── session.py
+│   │   ├── main.py
+│   │   ├── models
+│   │   │   ├── comment.py
+│   │   │   ├── discussion.py
+│   │   │   ├── document.py
+│   │   │   └── utils.py
+│   │   ├── schemas
+│   │   │   ├── comment_and_discussion.py
+│   │   │   ├── comment.py
+│   │   │   ├── discussion.py
+│   │   │   ├── document.py
+│   │   │   └── utils.py
+│   │   ├── services
+│   │   │   ├── comment
+│   │   │   │   ├── abstract_comment_service.py
+│   │   │   │   └── comment_service.py
+│   │   │   ├── discussion
+│   │   │   │   ├── abstract_discussion_service.py
+│   │   │   │   └── discussion_service.py
+│   │   │   ├── document
+│   │   │   │   ├── abstract_document_service.py
+│   │   │   │   ├── document_service_parser.py
+│   │   │   │   └── document_service.py
+│   │   │   └── service_base.py
+│   │   └── templates
+│   │       └── base.html
+│   ├── app.dockerfile
+│   ├── mypy.ini
+│   ├── pytest.ini
+│   ├── scripts
+│   │   ├── mypy.sh
+│   │   ├── pylint.sh
+│   │   └── run_tests.sh
+│   └── tests
+│       ├── conftest.py
+│       ├── test_api
+│       │   ├── test_comments.py
+│       │   ├── test_discussions.py
+│       │   ├── test_documents.py
+│       │   └── test_documents_unit.py
+│       ├── test_crud
+│       │   ├── test_comment.py
+│       │   └── test_document.py
+│       ├── test_db
+│       ├── test_models
+│       │   └── test_document.py
+│       ├── test_schemes
+│       │   └── test_discussion.py
+│       ├── test_services
+│       │   ├── test_comment_service.py
+│       │   ├── test_data
+│       │   │   └── knowledge_models
+│       │   │       ├── common_dsw
+│       │   │       │   ├── horizone_europe_dmp
+│       │   │       │   │   ├── DSW_project_name.docx
+│       │   │       │   │   ├── DSW_project_name.html
+│       │   │       │   │   └── DSW_project_name.pdf
+│       │   │       │   ├── ma_dmp_rda
+│       │   │       │   │   └── DSW_project_name.json
+│       │   │       │   └── questionnaire_report
+│       │   │       │       ├── DSW_project_name.docx
+│       │   │       │       ├── DSW_project_name.html
+│       │   │       │       ├── DSW_project_name.json
+│       │   │       │       ├── DSW_project_name.md
+│       │   │       │       ├── DSW_project_name.pdf
+│       │   │       │       └── DSW_project_name.tex
+│       │   │       └── life_sciences_dsw
+│       │   │           ├── horizone_europe_dmp
+│       │   │           │   ├── DSW project name.docx
+│       │   │           │   ├── DSW project name.html
+│       │   │           │   └── DSW project name.pdf
+│       │   │           ├── ma_dmp_rda
+│       │   │           │   └── DSW project name.json
+│       │   │           └── questionnaire_report
+│       │   │               ├── DSW project name.docx
+│       │   │               ├── DSW project name.html
+│       │   │               ├── DSW project name.json
+│       │   │               ├── DSW project name.md
+│       │   │               ├── DSW project name.pdf
+│       │   │               └── DSW project name.tex
+│       │   ├── test_discussion_service.py
+│       │   └── test_document_service.py
+│       └── utils.py
+├── conda-lock.yml
+├── docker-compose.yml
+├── environment-dev.yml
+├── README.md
+└── scripts
+    ├── create_or_update_env.sh
+    ├── lock_environment.sh
+    └── set_up_conda_channels.sh
+
+32 directories, 78 files
+```

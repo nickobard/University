@@ -1,3 +1,43 @@
+### Code Structure:
+
+```text
+.
+├── app
+│   ├── assets
+│   │   └── insert_script.sql
+│   ├── composer.json
+│   ├── composer.lock
+│   ├── public
+│   │   └── index.php
+│   └── src
+│       ├── Database
+│       │   └── Database.php
+│       ├── Middleware
+│       │   ├── JsonBodyParserMiddleware.php
+│       │   └── SecurityMiddleware.php
+│       └── Model
+│           ├── AbstractModel.php
+│           ├── Book.php
+│           ├── IdentifiableTrait.php
+│           └── ModelInterface.php
+├── docker
+│   ├── nginx
+│   │   └── default.conf
+│   ├── php7.4
+│   │   ├── Dockerfile
+│   │   ├── php.ini
+│   │   └── xdebug.ini
+│   ├── php8.1
+│   │   ├── Dockerfile
+│   │   ├── php.ini
+│   │   └── xdebug.ini
+│   └── postgres
+│       └── Dockerfile
+├── docker-compose.yaml
+└── README.md
+```
+
+
 # Task 8: REST API
 
 Your task is to create a simple REST API for managing books. The API allows viewing existing books, creating new ones, and updating or deleting existing ones.

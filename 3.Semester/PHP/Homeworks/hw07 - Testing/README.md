@@ -1,3 +1,42 @@
+### Code Structure:
+
+```text
+.
+├── composer.json
+├── composer.lock
+├── docker
+│   ├── nginx
+│   │   └── default.conf
+│   ├── php7.4
+│   │   ├── Dockerfile
+│   │   ├── php.ini
+│   │   └── xdebug.ini
+│   ├── php8.1
+│   │   ├── Dockerfile
+│   │   ├── php.ini
+│   │   └── xdebug.ini
+│   └── postgres
+│       └── Dockerfile
+├── docker-compose.yaml
+├── phpunit.xml
+├── README.md
+└── src
+    ├── Lib
+    │   ├── LinkedListItem.php
+    │   ├── LinkedList.php
+    │   ├── MathUtils.php
+    │   ├── Storage.php
+    │   └── UserService.php
+    └── Tests
+        ├── LinkedListItemTest.php
+        ├── LinkedListTest.php
+        ├── MathUtilsTest.php
+        ├── TestExtension.php
+        └── UserServiceTest.php
+
+```
+
+
 # Task 7: Testing
 
 ## Assignment

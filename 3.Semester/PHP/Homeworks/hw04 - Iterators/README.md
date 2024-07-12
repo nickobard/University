@@ -1,3 +1,20 @@
+### Code Structure:
+
+```text
+.
+├── README.md
+├── run.php
+├── src
+│   ├── Iterator
+│   │   ├── AbstractOrderIterator.php
+│   │   ├── InOrderIterator.php
+│   │   ├── PostOrderIterator.php
+│   │   └── PreOrderIterator.php
+│   └── Node.php
+└── trees.php
+```
+
+
 # Task 4
 
 In the `src` directory, there is a class `Node` representing a node of a binary tree. Each node may have a numerical value and left and right children. If a node does not have one of the children, the attribute holds `null`; otherwise, it contains a reference to another `Node`.

@@ -1,3 +1,22 @@
+### Code Structure:
+
+```text
+.
+├── composer.json
+├── composer.lock
+├── README.md
+├── run.php
+├── src
+│   ├── Builder.php
+│   ├── Invoice
+│   │   ├── Address.php
+│   │   ├── BusinessEntity.php
+│   │   └── Item.php
+│   ├── Invoice.php
+│   └── Renderer.php
+└── template.pdf
+```
+
 # Task 5: Invoices
 
 The goal is to create a program that generates invoices as PDF documents. You have a skeleton application prepared with classes representing items on the invoice and a `Builder` class used for invoice creation. Use Composer to install the [DomPDF library](https://github.com/dompdf/dompdf). If for any reason you wish to use a different library, it's possible after discussing with your instructor.

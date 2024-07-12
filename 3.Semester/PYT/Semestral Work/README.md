@@ -109,3 +109,88 @@ Current database scheme:
 Report can be found on [/about](http://localhost:8000/about) page or in the **bardanik.pdf** file in the root directory.
 
 Report contains more details about the project.
+
+## Code Structure:
+
+    excluding: "*pycache*|__init__.py|docs"
+
+```text
+.
+├── app
+│   ├── app
+│   │   ├── api
+│   │   │   ├── api.py
+│   │   │   ├── time_entires.py
+│   │   │   └── web_sockets.py
+│   │   ├── core
+│   │   │   └── config.py
+│   │   ├── crud
+│   │   │   └── crud_time_entry.py
+│   │   ├── db
+│   │   │   ├── base_class.py
+│   │   │   ├── init_db.py
+│   │   │   └── session.py
+│   │   ├── main.py
+│   │   ├── models
+│   │   │   └── time_entry.py
+│   │   ├── schemas
+│   │   │   └── time_entry.py
+│   │   ├── services
+│   │   │   ├── time_entry_graphs.py
+│   │   │   ├── time_entry_service.py
+│   │   │   └── time_entry_statistics.py
+│   │   ├── utils
+│   │   │   ├── helpers.py
+│   │   │   └── queries.py
+│   │   └── views
+│   │       └── views.py
+│   ├── app.dockerfile
+│   ├── pytest.ini
+│   ├── scripts
+│   │   ├── pep8_pylint.sh
+│   │   └── run_tests.sh
+│   ├── static
+│   │   └── images
+│   │       └── img.png
+│   ├── templates
+│   │   ├── about.html
+│   │   ├── analysis.html
+│   │   ├── base.html
+│   │   ├── components
+│   │   │   ├── footer.html
+│   │   │   ├── graphs.html
+│   │   │   ├── list.html
+│   │   │   ├── navbar.html
+│   │   │   ├── sidebar.html
+│   │   │   └── timer.html
+│   │   ├── report
+│   │   │   ├── pages
+│   │   │   │   ├── briefing.html
+│   │   │   │   ├── realization.html
+│   │   │   │   ├── references.html
+│   │   │   │   └── results.html
+│   │   │   └── report.html
+│   │   ├── report_base.html
+│   │   └── track.html
+│   └── tests
+│       ├── test_api
+│       │   ├── test_api.py
+│       │   └── test_time_entries.py
+│       ├── test_crud
+│       │   └── test_crud_time_entry.py
+│       ├── test.db
+│       └── test_services
+│           ├── test_time_entry_service.py
+│           └── test_time_entry_statistics.py
+├── docker-compose.yml
+├── environment.yml
+├── README.md
+└── scripts
+    ├── conda_create_or_update_env.sh
+    ├── generate_report.py
+    ├── set_up_conda_channels.sh
+    └── update_environment_file.sh
+
+23 directories, 51 files
+
+```

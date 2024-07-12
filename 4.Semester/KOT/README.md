@@ -1,5 +1,36 @@
 # KOT - Programing in Kotlin
 
+```text
+src
+├── main
+│   └── kotlin
+│       └── fit
+│           └── cvut
+│               └── bikot
+│                   └── homeworks
+│                       ├── hw01
+│                       │   └── heapsort
+│                       │       ├── Main.kt
+│                       │       └── PriorityQueue.kt
+│                       ├── hw02
+│                       │   └── elements
+│                       │       └── Elem.kt
+│                       └── hw03
+│                           └── postfix_visitor
+│                               ├── Expr.kt
+│                               ├── notes.md
+│                               └── Visitor.kt
+└── test
+    └── kotlin
+        └── fit
+            └── cvut
+                └── bikot
+                    └── homeworks
+                        └── hw01
+                            └── heapsort
+                                └── PriorityQueueTest.kt
+```
+
 - [hw01 - heapsort](src/main/kotlin/fit/cvut/bikot/homeworks/hw01)
 - [hw02 - elements](src/main/kotlin/fit/cvut/bikot/homeworks/hw02)
 - [hw03 - postfix_visitor](src/main/kotlin/fit/cvut/bikot/homeworks/hw03)
