@@ -1,16 +1,5 @@
 #PSI
 *.zip
-assets
-#sources from proseminars
-*prosem*
-proseminars
-lections
-#Others from PA1
-*.swp
-a.out
-*.tgz
-*test*
-test.sh
 
 #doxy
 */doc/*
