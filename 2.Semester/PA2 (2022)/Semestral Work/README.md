@@ -1,15 +1,3 @@
-# How to run
-
-```shell
-# build
-make all
-# run
-make run
-# create documentation
-make doc
-```
-
-![](assets/pacman_game.jpg)
 
 # Assignment
 
@@ -41,3 +29,27 @@ make doc
 ### Note
 
 This task is graded by an automatic system and then by the instructor. First, submit and debug the task using the automatic system, then submit one of your chosen solutions for evaluation by the instructor. Submission for instructor evaluation is done by clicking the "Submit to Instructor" button on the selected solution. The instructor will evaluate only one of your solutions and will not begin evaluating until you submit the task. Until the task is evaluated by both the automatic system and the instructor, no points are awarded (only partial ratings in percentages are displayed).
+
+# Results
+
+Created using SDL graphic library.
+
+![](assets/pacman_game.jpg)
+
+## How to run:
+
+```shell
+# build
+make all
+# run
+make run
+# create documentation
+make doc
+```
+
+## How to play:
+
+- Push arrows to change direction of the pacman.
+- User portals to slow down the ghost and to teleport.
+- Pick up all the scores to win.
+- Game is over when you loose all the lives.
