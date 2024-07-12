@@ -12,6 +12,8 @@ As the only backend DevOps team member I set up a Docker Compose for faster and 
 
 As a backend lead, I educated team members who didn't have much experience with Python or didn't have the experience at all, created tasks/issues for them in GitLab, and made the majority of code reviews (TBH almost all of my hours were spent in code reviews and DevOps, I focused on educating team members, giving them opportunities to learn and grow), and integrated a productivity measurement system with TogglTrack to ensure fair work distribution across members.
 
+Here is the UML diagram:
+
 ![](Documentation/images/uml.png)
 
 ### [Frontend](Frontend)
