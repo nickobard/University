@@ -1,3 +1,6 @@
+
+Excluded *.md files, CZE directories with tests, test.sh scripts.
+
 ```text
 .
 ├── ex03
