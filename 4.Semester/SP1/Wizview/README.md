@@ -26,8 +26,8 @@ Here is how the frontend looks like:
 ![img_2.png](Documentation/images/frontend/img_2.png)
 ![img_3.png](Documentation/images/frontend/img_3.png)
 
-Also see the [wizview_showcase.webm](Documentation%2Fwizview_showcase.webm) video of how the application works.
+Also see the [wizview_showcase.webm](Documentation/wizview_showcase.webm) video of how the application works.
 
-### [Documentation](Wizview/Documentation) (more visualizations and diagrams)
+### [Documentation](Documentation) (more visualizations and diagrams)
 
 I participated mainly in creation of UML Diagram, Business Processes Analysis.
