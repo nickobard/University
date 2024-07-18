@@ -8,7 +8,8 @@
 ![about.png](docs/images/about.png)
 ![docs.png](docs/images/docs.png)
 
-Also watch [how_the_app_works.webm](doc%2Fhow_the_app_works.webm) video to see how it works.
+Also watch video to see how it works:
+[how_the_app_works.webm](docs/how_the_app_works.webm), [how_the_app_works.mp4](docs/how_the_app_works.mp4)
 
 
 
@@ -102,7 +103,7 @@ Current database scheme:
 
 ![devdb.png](docs/images/devdb.png)
 
-[data.json](docs%2Fdb%2Fdata.json) and [model.json](docs%2Fdb%2Fmodel.json) are data used for FIT CTU intranet DBS portal data modeller.
+[data.json](docs/db/data.json) and [model.json](docs/db/model.json) are data used for FIT CTU intranet DBS portal data modeller.
 
 ## Report:
 
