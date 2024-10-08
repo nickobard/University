@@ -63,4 +63,4 @@ Each link leads to course annotation and syllabus, and source code.
 - [PRS - Practical Statistics](6.Semester/PRS)
 - [PA2 - Programming and Algorithmics 2](6.Semester/PA2) (23/24)
 - [ML2 - Machine Learning 2](6.Semester/ML2)
-- [NPFL138 - Deep Learning](6.Semester/NPFL138) ([MFF UK](https://www.mff.cuni.cz/en))
+- [NPFL138 - Deep Learning](https://github.com/nickobard/deep-learning) ([MFF UK](https://www.mff.cuni.cz/en))
