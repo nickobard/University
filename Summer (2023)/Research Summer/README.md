@@ -1,9 +1,49 @@
-# Research Summer
+# Research Summer - Keyword Matching
+
+In this summer research project, the focus was on developing and evaluating advanced keyword matching techniques to enhance named entity recognition (NER) in natural language processing (NLP). Traditional keyword matching relies on predefined lists of related keywords for each entity category, which can be limiting when dealing with phrases or variations like abbreviations.
+
+## Formal Assignment:
 
 Keyword matching is a simple but powerful named entity recognition technique in natural language text, which can be used by itself, or to support systems based on deep learning models. With this approach, for each named entity category (e.g. “bacteria”), a list of related keywords (e.g. “Salmonella”, “Streptococcus”) is provided, which is then used for the matching of words in query texts.
 
-
 This topic focuses on the research and development of advanced keyword-matching techniques, such as phrase matching (e.g. ”Escherichia coli”) or fuzzy matching (e.g. ”E. coli”). Numerous approaches can be investigated, such as similarity-based methods (e.g. edit distance, word embeddings, or phrase embeddings), or techniques used in the related problem of word alignment [1]. These approaches will be qualitatively compared. An important factor is computational efficiency, as the number of candidate phrases explodes with longer texts.
+
+## Results:
+
+### Dataset Preparation:
+
+- Created small custom dataset (dataset_1.json) to suit specific evaluation needs.
+
+### Embedding Models and Tools:
+
+- Gensim Word2Vec:
+  - Loaded pre-trained models like word2vec-google-news-300.
+  - Evaluated word similarities using different similarity functions (cosine, Euclidean distance, etc.).
+- Flair Embeddings:
+  - Used TransformerWordEmbeddings with models like bert-base-uncased.
+  - Experimented with parameters:
+    - Layers: all layers vs. last layer.
+    - Context: with sentence context vs. without.
+    - Subtoken pooling strategies.
+- Transformers Library (Hugging Face):
+  - Employed BERT models to extract embeddings.
+  - Tested aggregating over all layers vs. the last layer.
+
+### Evaluation and Analysis:
+
+- Implemented evaluators for each embedding approach to standardize evaluations.
+- Calculated statistical metrics and generated precision-recall curves.
+- Analyzed out-of-vocabulary (OOV) words and words lost during processing.
+- Compared the impact of different similarity functions and embedding configurations on performance.
+
+### Utilities and Visualization:
+
+- Developed utility scripts for preprocessing, similarity calculations, and statistical analysis.
+- Created visualization tools for highlighting results, plotting graphs, and presenting data in tables.
+
+***
+
+The project systematically compared various state-of-the-art keyword matching techniques using advanced embedding models like Word2Vec, BERT, and Flair embeddings. By experimenting with different configurations—such as layer selections, context usage, and similarity measures—the research provided some insights into the effectiveness of these techniques for named entity recognition.
 
 ### Code Structure:
 
