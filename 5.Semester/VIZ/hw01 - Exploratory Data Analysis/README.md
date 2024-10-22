@@ -1,4 +1,4 @@
-# Homework No. 1 - 🕵️‍♀️ Exploratory Data Analysis
+# Project 01 - 🕵️‍♀️ Exploratory Data Analysis
 
 ## 📚 Data
 In the files `intakes.csv` and `outcomes.csv`, you will find data from a shelter in Austin, Texas, USA. The data comes from the official [Austin Open Data source](https://data.austintexas.gov/).

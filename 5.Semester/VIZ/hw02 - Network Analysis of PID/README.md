@@ -1,4 +1,4 @@
-# Homework No. 2 - 🕸 PID Network Analysis
+# Project 02 - 🕸 PID Network Analysis
 
 ## 📚 Data
 As the dataset, we will use [open data from Prague Integrated Transport (PID)](https://pid.cz/o-systemu/opendata/). Specifically, we will work with data from [timetables](https://pid.cz/o-systemu/opendata/#h-gtfs), which are originally in the GTFS (General Transit Feed Specification) format. This format is used by a wide range of software applications, and therefore public transport agencies, including PID, use it to publish their data.

@@ -7,7 +7,7 @@ My part of work:
 - Further analysis of linearity and non-linearity in the dataset
 - AdaBoost model and its visualizations
 
-# Homework Assignment No. 3 - 📈 Visualization in Machine Learning from A to Z
+# Project 03 - 📈 Visualization in Machine Learning from A to Z
 
 ## 📚 Data
 
