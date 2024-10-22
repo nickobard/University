@@ -1,6 +1,6 @@
 # VIZ - Data Visualization
 
-## COURSE PROJECTS
+## Course Projects
 - [1. Exploratory Data Analysis](hw01%20-%20Exploratory%20Data%20Analysis)
   - Analyzed datasets from the Austin Animal Center to perform exploratory data analysis on animal intakes and outcomes between 2013 and 2022. Cleaned and prepared the data, conducted descriptive statistics, and used visualizations to answer questions about relationships between features like intake type and outcome, the role of animal age in adoption, and seasonal patterns in animal intake.
 - [2. Network Analysis of PID](hw02%20-%20Network%20Analysis%20of%20PID)
