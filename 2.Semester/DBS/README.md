@@ -1,6 +1,7 @@
 # DBS - Database Systems
 
-- Semestral Work - database for practicing in transformations and querying in SQL and Relational Algebra.  
+## [Semestral Work](Semestra Work)
+Developed a complex PostgreSQL database for a fantasy-themed "Soul Farm" project, modeling intricate relationships between entities like rooms, monsters, treasures, adventurers, and dungeon dynamics. Created SQL scripts to define the schema, insert data, and execute advanced queries involving joins, subqueries, transactions, and aggregate functions. Reflected on the challenges and insights gained from designing a rich data model and performing complex SQL operations.
 
 ## SYNOPSIS
 Students are introduced to the database engine architecture and typical user roles. They are briefly introduced to various database models. They learn to design small databases (including integrity constraints) using a conceptual model and implement them in a relational database engine. They get a hands-on experience with the SQL language, as well as with its theoretical foundation - the relational database model. They learn the principles of normalizing a relational database schema. They understand the fundamental concepts of transaction processing, controlling parallel user access to a single data source, as well as recovering a database engine from a failure. They are briefly introduced to special ways of storing data in relational databases with respect to speed of access to large quantities of data. This introductory-level course does not cover: Administration of database systems, debugging and optimizing database applications, distributed database systems, data stores.
