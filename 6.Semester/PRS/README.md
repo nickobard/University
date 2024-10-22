@@ -1,6 +1,6 @@
 # PRS - Practical Statistics
 
-TODO - See also PST and link there
+The code is in separate repository [Eurostat Datasets Analysis](https://github.com/nickobard/eurostat-datasets-analysis).
 
 ## SYNOPSIS
 The students will be introduced to methods of applied statistics. They will learn how to work with various types of data, perform analyses, and choose models fitting the data. The course will encompass regression and correlation analysis, analysis of variance and non-parametric methods. Students will learn to use the statistical software R and will apply the studied methods on data from real problems.
