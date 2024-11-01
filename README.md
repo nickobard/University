@@ -61,7 +61,7 @@ Each link leads to course annotation and syllabus, and source code.
 ### 5. Semester
 - [**📄👀 VIZ - Data Visualization**](5.Semester/VIZ)
 - [PST - Probabilitiy and Statistics](5.Semester/PST)
-- [ML1 - Machine Learning 1](5.Semester/ML1)
+- [**📄👀ML1 - Machine Learning 1**](5.Semester/ML1)
 - [AAG - Automata and Grammars](5.Semester/AAG)
 - [MA2 - Mathematical Analysis 2](5.Semester/MA2)
 ### 6. Semester
