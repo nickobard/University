@@ -1,5 +1,9 @@
 # AAG - Automata and Grammars
 
+❗ The code is present in this [repository](https://github.com/nickobard/AAG-Automata-and-Grammars). ❗
+
+Here you can see information about the course.
+
 ## SYNOPSIS
 Students are introduced to basic theoretical and implementation principles of the following topics: construction, use and mutual transformations of finite automata, regular expressions, and regular grammars, context-free grammars, construction and use of pushdown automata, and translation grammars and transducers. They know the hierarchy of formal languages and they understand the relationships between formal languages and automata. They are introduced to the Turing machine and complexity classes P and NP.
 
