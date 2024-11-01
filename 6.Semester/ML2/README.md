@@ -1,5 +1,9 @@
 # ML2 - Machine Learning 2
 
+❗ The code is present in this [repository](https://github.com/nickobard/Machine-Learning-II). ❗
+
+Here you can see information about the course.
+
 ## SYNOPSIS
 The goal of this course is to introduce students to the selected advanced methods of machine learning. In the supervised learning scenario, they, in particular, learn kernel methods and neural networks. In the unsupervised learning scenario students learn the principal component analysis and other dimensionality reduction methods. Moreover, students get the basic principles of reinforcement learning and natural language processing.
 
