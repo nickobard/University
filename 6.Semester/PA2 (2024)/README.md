@@ -1,6 +1,6 @@
 # PA2 - Programming and Algorithmics 2 (2024)
 
-❗ The code is present in this [repository](https://github.com/nickobard/ZUM-Artificial-Intelligence-Foundations-Practicals). ❗
+❗ The code is present in this [repository](https://github.com/nickobard/PA2-Programming-and-Algorithmics-2). ❗
 
 Here you can see information about the course.
 
