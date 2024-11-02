@@ -67,6 +67,6 @@ Each link leads to course annotation and syllabus, and source code.
 ### 6. Semester
 - [**📄👀 ZUM - Artificial Intelligence Fundamentals**](6.Semester/ZUM)
 - [**📄👀 PRS - Practical Statistics**](https://github.com/nickobard/eurostat-datasets-analysis)
-- [**📄👀 PA2 - Programming and Algorithmics 2**](6.Semester/PA2) (23/24)
+- [**📄👀 PA2 - Programming and Algorithmics 2**](6.Semester/PA2%20(2024)) (23/24)
 - [**📄👀 ML2 - Machine Learning 2**](6.Semester/ML2)
 - [**📄👀 NPFL138 - Deep Learning**](https://github.com/nickobard/deep-learning) ([MFF UK](https://www.mff.cuni.cz/en))
