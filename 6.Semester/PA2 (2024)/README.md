@@ -1,5 +1,9 @@
 # PA2 - Programming and Algorithmics 2 (2024)
 
+❗ The code is present in this [repository](https://github.com/nickobard/ZUM-Artificial-Intelligence-Foundations-Practicals). ❗
+
+Here you can see information about the course.
+
 ## SYNOPSIS
 Students know the instruments of object-oriented programming and are able to use them for specifying and implementing abstract data types (stack, queue, enlargeable array, list, set, table). They learn these skills using the C++ programming language and are introduced to all C++ features needed in object-oriented programming (e.g., template programming, copying/moving of objects, operator overloading, inheritance, polymorphism).
 
