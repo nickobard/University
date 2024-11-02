@@ -65,7 +65,7 @@ Each link leads to course annotation and syllabus, and source code.
 - [**📄👀 AAG - Automata and Grammars**](5.Semester/AAG)
 - [MA2 - Mathematical Analysis 2](5.Semester/MA2)
 ### 6. Semester
-- [ZUM - Artificial Intelligence Fundamentals](6.Semester/ZUM)
+- [**📄👀 ZUM - Artificial Intelligence Fundamentals**](6.Semester/ZUM)
 - [**📄👀 PRS - Practical Statistics**](https://github.com/nickobard/eurostat-datasets-analysis)
 - [PA2 - Programming and Algorithmics 2](6.Semester/PA2) (23/24)
 - [**📄👀 ML2 - Machine Learning 2**](6.Semester/ML2)

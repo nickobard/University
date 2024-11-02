@@ -1,5 +1,9 @@
 # ZUM - Artificial Intelligence Fundamentals
 
+❗ The code is present in this [repository](https://github.com/nickobard/ZUM-Artificial-Intelligence-Foundations-Practicals). ❗
+
+Here you can see information about the course.
+
 ## SYNOPSIS
 Basic course on introduction to artificial intelligence with emphasis on symbolic techniques. The design of an intelligent agent and the techniques needed to create it will be discussed, especially at the decision-making level. The intelligent agent in the context of the course can be represented for example by a physical robot, but also by a non-physical entity, such as a virtual assistant or a character in a computer game. We will not only introduce the basics, but also show the current state-of-the-art during the course.
 
