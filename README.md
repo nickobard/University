@@ -27,6 +27,8 @@ Each link leads to course annotation and syllabus, and source code.
 
 ❗**Bold font with 📄👀** indicates available source code.❗
 
+Subjects from the Master's Degree are highlighted with Ⓜ️🤓.
+
 ### 1. Semester
 - [**📄👀 PA1 - Programming and Algorithmics 1**](1.Semester/PA1)
 - [UOS - Unix-like Operating Systems](1.Semester/UOS)
@@ -70,3 +72,11 @@ Each link leads to course annotation and syllabus, and source code.
 - [**📄👀 PA2 - Programming and Algorithmics 2**](6.Semester/PA2%20(2024)) (23/24)
 - [**📄👀 ML2 - Machine Learning 2**](6.Semester/ML2)
 - [**📄👀 NPFL138 - Deep Learning**](https://github.com/nickobard/deep-learning) ([MFF UK](https://www.mff.cuni.cz/en))
+
+### 7. Semester (Current)
+- [PDD - Data Preprocessing](7.Semester/PDD) Ⓜ️🤓
+- [SCR - Time Series Statistical Analysis](7.Semester/SCR) Ⓜ️🤓
+- [MPI - Mathematics for Informatics](7.Semester/MPI) Ⓜ️🤓
+- [BIG - Database Technologies for Big Data](7.Semester/BIG)
+- [ZNS - Knowledge Systems](7.Semester/ZNS)
+- [MPL - Psychology for Managers](7.Semester/MPL)
