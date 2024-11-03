@@ -75,8 +75,8 @@ Subjects from the Master's Degree are highlighted with Ⓜ️🤓.
 
 ### 7. Semester (Current)
 - [PDD - Data Preprocessing](7.Semester/PDD) Ⓜ️🤓
-- [SCR - Time Series Statistical Analysis](7.Semester/SCR) Ⓜ️🤓
+- [SCR - Statistical Analysis of Time Series](7.Semester/SCR) Ⓜ️🤓
 - [MPI - Mathematics for Informatics](7.Semester/MPI) Ⓜ️🤓
 - [BIG - Database Technologies for Big Data](7.Semester/BIG)
-- [ZNS - Knowledge Systems](7.Semester/ZNS)
-- [MPL - Psychology for Managers](7.Semester/MPL)
+- [ZNS - Knowledge-based Systems](7.Semester/ZNS)
+- [MPL - Managerial Psychology](7.Semester/MPL)
