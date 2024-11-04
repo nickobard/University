@@ -11,7 +11,7 @@ old demon could no longer keep track of everything happening there, so he decide
 not only record everything but also increase the success and profitability of his business and ensure a better future
 for his children.
 
-The main source of income comes from visits by brave adventurers. The famous (i.e., cursed!) demon wants to record each
+The main source of income comes from visits by brave adventurers. The famous (cursed!) demon wants to record each
 visit, how many adventurers came, their class, level, race (the value of the soul depends on this!!!), type of death (
 whether the goddess of luck smiled at them or us, which according to the latest statistics, she almost always does). If
 the adventurer survived, we must record if they carried any treasure with them, which we must then buy back. But more on
@@ -25,12 +25,12 @@ type (skeleton, dragon, slime, beholder, etc.), strength, identifier, possibly a
 hierarchy and bosses (superiors), and are assigned which room they must guard. Or they don't have to, because a vigilant
 and faithful hellhound does it instead.
 
-Returning to our treasures. It's clear that this business carries some risks (even for us). Cursed (i.e., famous!)
+Returning to our treasures. It's clear that this business carries some risks (even for us). Cursed (blessed!)
 adventurers steal treasure, kill monsters, cause disruptions and other vandalism. Moreover, it's an ordinary household,
 where other obstacles may appear (an old statue collapses, a frail skeleton loses a favorite bone, or a clumsy slime
 gets stuck in the toilet). The list of all obstacles should describe the type and the room where the problem occurred.
 
-All these soul losses need to be somehow repaired. How? Thank God (i.e., Cursed Devil!), we have Hellnet! From the
+All these soul losses need to be somehow repaired. How? Thank God (Curse Devil!), we have Hellnet! From the
 comfort of home, we can shop from each of the nine layers of hell! You can buy almost anything, and the old demon wants
 to record each purchase by type, price, and website. For example, at www.yourdungeon.hell, we can buy a new statue, a
 replacement bone, or some treasure that will attract more adventurers. At www.9hell.hell, we can acquire services and
