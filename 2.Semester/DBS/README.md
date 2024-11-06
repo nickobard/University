@@ -1,6 +1,6 @@
 # DBS - Database Systems
 
-## [Semestral Work](Semestra Work)
+## [Semestral Work](https://github.com/nickobard/University/tree/master/2.Semester/DBS/Semestral%20Work)
 Developed a complex PostgreSQL database for a fantasy-themed "Soul Farm" project, modeling intricate relationships between entities like rooms, monsters, treasures, adventurers, and dungeon dynamics. Created SQL scripts to define the schema, insert data, and execute advanced queries involving joins, subqueries, transactions, and aggregate functions. Reflected on the challenges and insights gained from designing a rich data model and performing complex SQL operations.
 
 ## SYNOPSIS
