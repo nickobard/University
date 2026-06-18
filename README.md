@@ -3,7 +3,7 @@
 This software was developed with the support of the **Faculty of Information Technology, Czech Technical University in Prague**.
 For more information, visit [fit.cvut.cz](https://fit.cvut.cz).
 
-
+***
 
 Hello, I'm Nikita, this is my repository with all of my [university](https://fit.cvut.cz/en) subjects, projects, homeworks, semestral works and other activities.
 
