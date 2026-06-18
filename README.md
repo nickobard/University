@@ -80,8 +80,12 @@ Subjects from the Master's Program are highlighted with Ⓜ️🤓.
 
 ### 7. Semester
 - [PDD - Data Preprocessing](7.Semester/PDD) Ⓜ️🤓
-- [SCR - Statistical Analysis of Time Series](7.Semester/SCR) Ⓜ️🤓
 - [MPI - Mathematics for Informatics](7.Semester/MPI) Ⓜ️🤓
 - [BIG - Database Technologies for Big Data](7.Semester/BIG)
 - [ZNS - Knowledge-based Systems](7.Semester/ZNS)
 - [MPL - Managerial Psychology](7.Semester/MPL)
+
+### 8. - 10. Semestr
+
+During the next semesters I had in parallel work experience and was writing my Bachelor's thesis:
+- [**📄👀 BAP - Bachelor Thesis**](https://github.com/nickobard/FIT-CTU-Bc-Work-Enhancing-Fake-News-Classification)
