@@ -79,7 +79,7 @@ Some additional courses taken from the Master's Program are highlighted with Ⓜ
 - [**📄👀 NPFL138 - Deep Learning**](https://github.com/nickobard/deep-learning) ([MFF UK](https://www.mff.cuni.cz/en))
 
 ### 7. Semester
-- [PDD - Data Preprocessing](7.Semester/PDD) Ⓜ️🤓
+- [**📄👀 PDD - Data Preprocessing**](7.Semester/PDD) Ⓜ️🤓
 - [MPI - Mathematics for Informatics](7.Semester/MPI) Ⓜ️🤓
 - [SCR - Statistical Analysis of Time Series](7.Semester/SCR) Ⓜ️🤓
 - [BIG - Database Technologies for Big Data](7.Semester/BIG)
