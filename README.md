@@ -1,4 +1,9 @@
-![](fit-cvut-logo-en.svg)
+<img src="https://fit.cvut.cz/static/images/fit-cvut-logo-en.svg" alt="FIT CTU logo" height="200">
+
+This software was developed with the support of the **Faculty of Information Technology, Czech Technical University in Prague**.
+For more information, visit [fit.cvut.cz](https://fit.cvut.cz).
+
+
 
 Hello, I'm Nikita, this is my repository with all of my [university](https://fit.cvut.cz/en) subjects, projects, homeworks, semestral works and other activities.
 
@@ -27,7 +32,7 @@ Each link leads to course annotation and syllabus, and source code.
 
 ❗**Bold font with 📄👀** indicates available source code.❗
 
-Subjects from the Master's Degree are highlighted with Ⓜ️🤓.
+Subjects from the Master's Program are highlighted with Ⓜ️🤓.
 
 ### 1. Semester
 - [**📄👀 PA1 - Programming and Algorithmics 1**](1.Semester/PA1)
@@ -73,7 +78,7 @@ Subjects from the Master's Degree are highlighted with Ⓜ️🤓.
 - [**📄👀 ML2 - Machine Learning 2**](6.Semester/ML2)
 - [**📄👀 NPFL138 - Deep Learning**](https://github.com/nickobard/deep-learning) ([MFF UK](https://www.mff.cuni.cz/en))
 
-### 7. Semester (Current)
+### 7. Semester
 - [PDD - Data Preprocessing](7.Semester/PDD) Ⓜ️🤓
 - [SCR - Statistical Analysis of Time Series](7.Semester/SCR) Ⓜ️🤓
 - [MPI - Mathematics for Informatics](7.Semester/MPI) Ⓜ️🤓
