@@ -1,5 +1,7 @@
 # Data Preprocessing
 
+Source code of practicals is available in [this repository](https://github.com/nickobard/Data-Preprocessing-Course).
+
 ## Synopsis
 Students learn to prepare raw data for further processing and analysis. They learn what algorithms can be used to extract information from various data sources, such as images, texts, time series, etc., and learn the skills to apply these theoretical concepts to solve specific problems in individual projects - e.g., extraction of characteristics from images or from web pages.
 
