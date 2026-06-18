@@ -32,7 +32,7 @@ Each link leads to course annotation and syllabus, and source code.
 
 ❗**Bold font with 📄👀** indicates available source code.❗
 
-Subjects from the Master's Program are highlighted with Ⓜ️🤓.
+Some additional courses taken from the Master's Program are highlighted with Ⓜ️🤓.
 
 ### 1. Semester
 - [**📄👀 PA1 - Programming and Algorithmics 1**](1.Semester/PA1)
@@ -81,6 +81,7 @@ Subjects from the Master's Program are highlighted with Ⓜ️🤓.
 ### 7. Semester
 - [PDD - Data Preprocessing](7.Semester/PDD) Ⓜ️🤓
 - [MPI - Mathematics for Informatics](7.Semester/MPI) Ⓜ️🤓
+- [SCR - Statistical Analysis of Time Series](7.Semester/SCR) Ⓜ️🤓
 - [BIG - Database Technologies for Big Data](7.Semester/BIG)
 - [ZNS - Knowledge-based Systems](7.Semester/ZNS)
 - [MPL - Managerial Psychology](7.Semester/MPL)
