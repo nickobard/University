@@ -5,7 +5,7 @@ For more information, visit [fit.cvut.cz](https://fit.cvut.cz).
 
 ***
 
-Hello, I'm Nikita, this is my repository with all of my [university](https://fit.cvut.cz/en) subjects, projects, homeworks, semestral works and other activities.
+Hello, I'm Nikita, this is my repository with all of my [university](https://fit.cvut.cz/en) subjects, projects, homeworks, semestral works and other activities during my Bachelor's program (with addition of some courses from Master's program).
 
 
 ## Highlights
