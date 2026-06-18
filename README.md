@@ -14,6 +14,7 @@ List of the most interesting, big and relevant projects and courses.
 
 ### Data Science
 
+- Bachelor's Thesis - [Enhancing Fake News Classification With Advanced NLP Models](https://github.com/nickobard/FIT-CTU-Bc-Work-Enhancing-Fake-News-Classification).
 - Machine Learning - Semestral Works during [ML1](5.Semester/ML1) and [ML2](6.Semester/ML2) courses.
 - [Data Analysis of Eurostat Datasets](https://github.com/nickobard/eurostat-datasets-analysis) - semestral works in teams.
 - [Data Visualization](5.Semester/VIZ) - explorative analysis, visualization of data, visualization in ML.
