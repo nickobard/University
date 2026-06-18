@@ -8,6 +8,14 @@ For more information, visit [fit.cvut.cz](https://fit.cvut.cz).
 - Homeworks - tasks in the semester.
 - Semestral Work - Time Tracker App - application to track time, built with FastAPI, PostgreSQL, Jinja and Javascript.
 
+Some screenshots from the Semestral Work:
+
+![](Semestral Work/docs/images/track.png)
+![sidebar.png](Semestral Work/docs/images/sidebar.png)
+![](Semestral Work/docs/images/analysis.png)
+![about.png](Semestral Work/docs/images/about.png)
+![docs.png](Semestral Work/docs/images/docs.png)
+
 ## SYNOPSIS
 The aim of the course is to get acquainted with basic efficient control and data structures of the Python programming language for text and binary data processing. The differences between philosophy of programming in Python and in other programming languages will be explained. Each topic is prepared for students in the format of a Jupyter notebook, which enables greater accent to individual student work. Before each lab, students pass a short test on the last week topic. Four homeworks plus a semester work will be assigned during the semester.
 
