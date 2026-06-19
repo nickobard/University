@@ -1,7 +1,7 @@
 # PA2 - Programming and Algorithmics 2 (2022)
 
 - Homeworks - main tasks of the course.
-- Semestral Work - Pacman application built with SDL - ❗ The source code is available in [this repository](https://github.com/nickobard/CPP-Pacman-Game/tree/main) ❗.
+- Semestral Work - Pacman application built with SDL (❗ The source code is available in [this repository](https://github.com/nickobard/CPP-Pacman-Game/tree/main) ❗).
 - Exercises - easier tasks for learning.
 - snippets - code snippets to play with the code and understand its properties
 - tools - my created template files or scripts.
