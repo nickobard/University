@@ -8,7 +8,9 @@
 
 ### Images from the semestral work:
 
-![](Semestral%20Work/docs/pacman_game.jpg)
+![pacman_game.jpg](Semestral%20Work/docs/pacman_game.jpg)
+![documentation_game_actor.png](Semestral%20Work/docs/documentation_game_actor.png)
+![documentation_game_manager.png](Semestral%20Work/docs/documentation_game_manager.png)
 
 ## SYNOPSIS
 Students know the instruments of object-oriented programming and are able to use them for specifying and implementing abstract data types (stack, queue, enlargeable array, list, set, table). They learn these skills using the C++ programming language and are introduced to all C++ features needed in object-oriented programming (e.g., template programming, copying/moving of objects, operator overloading, inheritance, polymorphism).
