@@ -6,6 +6,10 @@
 - snippets - code snippets to play with the code and understand its properties
 - tools - my created template files or scripts.
 
+### Images from the semestral work:
+
+![](Semestral%20Work/docs/pacman_game.jpg)
+
 ## SYNOPSIS
 Students know the instruments of object-oriented programming and are able to use them for specifying and implementing abstract data types (stack, queue, enlargeable array, list, set, table). They learn these skills using the C++ programming language and are introduced to all C++ features needed in object-oriented programming (e.g., template programming, copying/moving of objects, operator overloading, inheritance, polymorphism).
 
