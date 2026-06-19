@@ -90,4 +90,4 @@ Some additional courses taken from the Master's Program are highlighted with Ⓜ
 ### 8. - 10. Semestr
 
 During the next semesters I had in parallel work experience and was writing my Bachelor's thesis:
-- [**📄👀 BAP - Bachelor Thesis**](https://github.com/nickobard/FIT-CTU-Bc-Work-Enhancing-Fake-News-Classification)
+- [**📄👀 BAP - Bachelor Thesis**](https://github.com/nickobard/FIT-CTU-Bc-Work-Enhancing-Fake-News-Classification) (Graduation 🎉🎉🎉)
