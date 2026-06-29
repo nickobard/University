@@ -1,5 +1,7 @@
 # Managerial Psychology
 
+View the presentations about hindsight bias in the presentations directory. During the course I had to pick some topic about psychology and present it to the students. I studied hindsight bias from social psychology, a bias that we can widely observe in our society, where once we know the outcome, the premises that would lead to that outcome are much more obvious than without knowing the outcome. People tend to critisize failures of others, exclaiming how it wasn't obvious from the beginning, but they don't understand that before the result is seen, there is large informational noise that disallow to see the correct reasons. Once we see the outcome, those reason are often highlighted.
+
 ## SYNOPSIS
 
 Students will be introduced to the basic psychological principles relevant to managerial practice and human resource management. They will understand the fundamentals of cognitive and behavioral approaches, the importance of a manager's personality, internal attitudes, behavior, interactions, and communication. Students will learn about personality theories, intelligence, motivation, and cognitive and affective processes. Selected techniques will be practiced through hands-on exercises. The knowledge gained in this course can be applied both in future employment and in everyday life.
