@@ -23,3 +23,4 @@ The foundation of the course is psychology as a modern science, not a collection
 12. Psychology of decision making
 13. Applied psychopathology
 14. Final repetition, model test questions. Space for questions on topics.
+
