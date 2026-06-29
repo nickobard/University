@@ -1,5 +1,7 @@
 # DB Technologies for Big Data
 
+The source code is available [here](https://github.com/nickobard/Big-Data-Technologies-Projects).
+
 ## Synopsis
 Students will be introduced into the field of Big Data processing where nonrelational (NoSQL) database engines are typically used today. The course is focused practically so that after finishing the course students were able to choose suitable tools (mostly open source) and techniques,design and implement a simplest reproducible method of data processing (data collection, transformation/aggregation, presentation). Students get acquainted with various architectures for processing and storing big data. A theoretical foundation and presentation of individual technologies will be supplemented with specific examples from practice.
 
