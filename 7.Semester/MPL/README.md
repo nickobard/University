@@ -1,6 +1,6 @@
 # Managerial Psychology
 
-View the presentations about hindsight bias in the presentations directory. During the course I had to pick some topic about psychology and present it to the students. I studied hindsight bias from social psychology, a bias that we can widely observe in our society, where once we know the outcome, the premises that would lead to that outcome are much more obvious than without knowing the outcome. People tend to critisize failures of others, exclaiming how it wasn't obvious from the beginning, but they don't understand that before the result is seen, there is large informational noise that disallow to see the correct reasons. Once we see the outcome, those reason are often highlighted.
+View the [presentations about hindsight bias](./hindsight%20bias.pdf). During the course I had to pick some topic about psychology and present it to the students. I studied hindsight bias from social psychology, a bias that we can widely observe in our society, where once we know the outcome, the premises that would lead to that outcome are much more obvious than without knowing the outcome. People tend to critisize failures of others, exclaiming how it wasn't obvious from the beginning, but they don't understand that before the result is seen, there is large informational noise that disallow to see the correct reasons. Once we see the outcome, those reason are often highlighted.
 
 ## SYNOPSIS
 
